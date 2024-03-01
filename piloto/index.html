@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define a o idioma-->
+<head>
+    <!--As tags meta determinam os metadados, que são as informações sobre dados de um documento HTML.-->
+    <meta charset="UTF-8"> 
+    <!-- Basicamente é um dicionário assim não teremos restrições na escrita-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
+    <!--Estimula a pagina a rodar melhor no edge-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta o tamanho da tela para os dispositivos (a escala inicial é 1.0)-->
+
+    <title>Portifolio Pedro</title>
+
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <!--Tag link faz ligação com  arquivo css que sera responsavel pela estilização da página-->
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__links" href="index.html">Home</a>
+            <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
+        </nav>
+    </header><!-- É o cabeçalho da página-->
+    
+    <main class="principal">
+    <!--É o principal, onde vai o titulo parágrafo, os botões etc...-->
+
+        <section class="principal__conteudo">     
+        <!--Faz uma separação no caso as tags <h1>, <p>, <a> foram separadas da imagem -->
+
+            <h1 class="conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="destaque__titulo">com um Front-end de qualidade!</strong></h1>
+            <!--Tag strong ajuda a dar uma importancia a mais na palavra escrita-->
+            
+            <p class="conteudo__paragrafo">Olá! Sou Pedro Henrique, desenvolvedor Front-end com especialidade em <strong class="destaque__paragrafo">React, HTML e CSS.</strong>  Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            
+            <div class="conteudo__divisor__links">
+            <!-- A tag div funciona como um pião pois não tem valor semântico, no caso estou usando para fazer uma divisoria entre os botões-->
+                <h2 class="divisor__subtitulo">Acesse minhas redes:</h2>
+                
+                <a class="divisor__links__link" href="https://instagram.com/pdrogjo">
+                    <img class="Logo" src="./assets/Logo Instagram.png" alt="Logo do Instagram"> Instagram</a>
+                <!-- <a> Funciona para colocar links em forma de "Botão" / href me da uma referencia de link para ser redirecionado clicando no item que estiver entre o <a> </a>-->
+
+                <a class="divisor__links__link" href="https://github.com/PdroOlive"> 
+                <img class="Logo" src="./assets/Logo Github.png" alt="Logo do GitHub"> GitHub </a>
+                <!--Adicionando uma imagem dentro do campo do Github-->
+
+                <a class="divisor__links__link" href="https://www.linkedin.com/in/pedro-henrique-b456182b2/">
+                <img class="Logo" src="./assets/Logo linkedin.png" alt="Logo do Linkedin"> Linkedln</a>
+                
+            </div>
+        </section>
+
+        <img class="principal__imagem" src="./assets/Pdro.png" alt="Foto do Pedro Henrique">
+    </main>
+    <footer class="conclusao">
+        <p>Desenvolvido pelo Pedro Henrique</p>
+    </footer><!--Rodapé da página-->
+</body>
+</html>

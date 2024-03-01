@@ -1,0 +1,197 @@
+/*Em computação gráfica, a viewport é a porção de área visível de um plano e é utilizada como unidade de medida no CSS para criar páginas Web 100% responsivas. Em outras palavras, a viewport varia de dispositivo para dispositivo, por exemplo em computadores, tablets e celulares, cada tela possui dimensões diferentes e enquanto uma página não responsiva apresentaria os elementos desproporcionais, uma página responsiva utilizando viewport teria seus elementos adequados a cada proporção.*/
+
+/*Ao definir o valor da propriedade display de um elemento como flex, criamos um contêiner flex, ou seja, passamos a utilizar o Flexbox. A partir desse ponto, todos os elementos que estão dentro do contêiner são chamados de elementos-filhos e apresentarão comportamentos padronizados.*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/*Importando uma fonte do titulo*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+/*Importando a fonte do paragrafo*/
+
+:root
+{
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciara: #8a2be2;
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria:"Montserrat", sans-serif;
+    --fonte-size-primaria: 2.25rem;
+    --fonte-size-secundaria: 1.5rem;
+}
+
+*
+{
+    /* Asterisco seleciona todas as tag para fazer uma alteração universal*/
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    box-sizing: border-box; /*Soluciona o problema da tag filho ultrapassar os limite da tag pai*/
+    /*height: 100vh; Definindo a altura da pagina (viewport)*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho
+{
+    padding: 2% 0% 0% 15%;
+
+
+}
+
+.cabecalho__menu
+{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__links
+{
+    font-size: var(--fonte-size-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-terciara);
+    transition: text-shadow 0.5s, color 0.5s;
+}
+
+.cabecalho__menu__links:hover
+{
+    color: var(--cor-secundaria);
+    text-shadow: 2px 0px 8px var(--cor-secundaria);
+
+}
+
+.principal
+{
+    padding: 5% 15%;
+    display: flex;/*Ajusta os itens filho de maneira uniforme no caso aqui sera organizado em linha*/
+    align-items: center; /*Centraliza as tags filho em relação a imagem por ter uma altura maior*/
+    justify-content: space-between;/* A propriedade justify-content controla o posicionamento dos elementos filhos ao longo do eixo principal e também ajuda a distribuir o espaço livre entre eles*/
+    gap: 82px;
+}
+
+.principal__conteudo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /*Isso estabelece o eixo principal, definindo assim a direção que os itens flexíveis são colocados no flex container. */
+    gap: 40px;
+    /*A propriedade gap não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas */
+}
+
+.conteudo__titulo
+{
+    font-size: var(--fonte-size-primaria);
+    font-family: var(--fonte-primaria);
+}
+
+.destaque__titulo
+{
+    color: var(--cor-terciara)
+}
+
+.conteudo__paragrafo
+{
+    font-size: var(--fonte-size-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.destaque__paragrafo
+{
+    color: var(--cor-terciara);
+    border: 1px solid var(--cor-terciara);
+
+}
+
+.conteudo__divisor__links
+{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+.divisor__subtitulo
+{
+    font-family: var(--fonte-primaria);
+    font-size: var(--fonte-size-secundaria);
+    font-weight: 400;
+}
+
+.divisor__links__link
+{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 70%;
+    text-align: center; /*Text Align é a propriedade alinha o texto de acordo com a sua preferência*/
+    border-radius: 8px;/*Ajusta o raio de arredondamento da borda */
+    border: 2px solid var(--cor-terciara);
+    font-size: var(--fonte-size-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    text-decoration: none; /*Removendo qualquer tipo de decoração do texto como um sublinhado*/
+    padding: 21.5px 0px;/*O primeiro valor do padding sempre será da vertical e segundo será da horizontal*/
+    color: var(--cor-secundaria);
+    transition: box-shadow 0.5s, border 0.5s;
+}
+
+.Logo
+{
+    filter: brightness(0) saturate(100%) invert(25%) sepia(56%) saturate(3688%) hue-rotate(260deg) brightness(86%) contrast(107%)
+
+}
+.divisor__links__link:hover
+{
+    border:  2px solid var(--cor-secundaria);
+    box-shadow: 0px 0px 6px 1px var(--cor-secundaria);
+    color: var(--cor-terciara);
+}
+
+.principal__imagem
+{
+    width: 50%;
+}
+
+.conclusao
+{
+    padding: 1%;
+    text-align: center;
+    background-color: var(--cor-terciara);
+    font-family: var(--fonte-secundaria);
+    font-size: var(--fonte-size-secundaria);
+    color: var(--cor-primaria);
+}
+
+@media (max-width: 1240px)
+{
+    .cabecalho
+    {
+        padding: 11%;
+    }
+
+    .cabecalho__menu
+    {
+        justify-content: center;
+    }
+    
+    .principal
+    {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .principal__conteudo
+    {
+        width: auto;
+    }
+}
+
+
+
+
+
+  
+

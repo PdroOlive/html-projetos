@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Icon.ico" type="image/x-icon">
+    <title>Tags</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" rel="prev"> home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Tags HTML:</h1>
+        <ul>
+            <li> <abbr title="Use a Tag &lt;h1&gt;"> Titulos </abbr></li>
+            <li> <abbr title="Use a Tag &lt;p&gt;"> Paragrafos</abbr></li>
+            <li> <abbr title="Use a Tag &lt;abbr&gt;"> Abreviaçoes </abbr></li>
+            <li> <abbr title="Use a Tag &lt;a&gt;"> âncora </abbr></li>
+            <li> <abbr title="Use a Tag &lt;strong&gt;"> Negrito </abbr></li>
+            <li> <abbr title="Use a Tag &lt;br&gt;"> Quebra linhas </abbr></li>
+            <li> <abbr title="Use a Tag &lt;img&gt;"> Image </abbr></li>
+        </ul>
+        <h1>Testando fotos responsivas</h1>
+        <picture>
+            <source media="(max-width: 750px)" srcset="./img/p.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="./img/m.png" type="image/png" >
+            <img src="./img/g.png" alt="Imagem flexivel">
+        </picture>
+
+        <h1>Reproduzindo Audios:</h1>
+        <audio src="./audios/natal.mp3" controls></audio>
+        <a href="./audios/natal.mp3" download="natal.mp3" type="audio/aac" >Baixar Audio</a>
+</body>
+</html>

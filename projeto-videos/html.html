@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML</title>
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+        }
+        body
+        {
+            background-color: rgb(38, 38, 38);
+        }
+        main
+        {
+            padding: 1%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .text
+        {
+            color: white;
+        }
+        .thumbs
+        {
+            display: flex;
+            gap: 10px;
+        }
+        .paragrafos
+        {
+            text-decoration:  none;
+            color: white;
+            font-weight: 900;
+        }
+        .paragrafos:hover
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 class="text">Curso de HTML</h1>
+        <iframe class="thumbs" width="560" height="315" src="https://www.youtube.com/embed/epDCjksKMok?si=V0zk_E5oMsA0ZlhB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <a class="paragrafos" href="https://youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o&si=hFj0BY7NXRyl6o6R" target="_blank">&gt; Veja o Curso completo! &lt;</a>
+
+        <a href="index.html" rel="prev"><img src="./img/voltar.png" alt="Voltar"> </a>
+    </main>
+    
+</body>
+</html>

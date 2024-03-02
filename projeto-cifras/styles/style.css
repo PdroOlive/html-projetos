@@ -8,6 +8,14 @@
     padding: 0;
 }
 
+:root
+{
+    --font01: "Passion One", sans-serif;
+    --font02: "Sriracha", sans-serif;
+    --font01-cor: white;
+
+}
+
 body
 {
     min-height: 100vh;
@@ -16,52 +24,110 @@ body
 .cabecalho
 {
     background-color: black;
-    height: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.233);
 }
 
 #cabecalho-titulo
 {
-    font-family: "Passion One", sans-serif;
-    font-size: 40px;
-    color: white;
+    font-family: var(--font01);
+    font-size: 4em;
+    color: var(--font01-cor);
     font-variant: small-caps;
 }
 
 .cabecalho-link
 {
-    font-family: "Passion One", sans-serif;
-    font-size: 20px;
-    color: white;
+    font-family: var(--font01);
+    font-size: 1.2em;
+    color: var(--font01-cor);
+    text-decoration: none;
     
 }
-#link
-{
-    text-decoration: none;
-}
-#link:hover
+
+.cabecalho-link > a:hover
 {
     text-decoration: underline;
-}
 
+}
 section
 {
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
-    font-family: "Sriracha", sans-serif;
+    font-family: var(--font02);
+    font-size: 2em;
+}
+
+.normal > p
+{
+    padding-bottom: 2em;
 }
 
 .imagem > p
 {
-    background-color: rgba(0, 0, 0, 0.247);
-    width: 500px;
+    background-color: rgba(0, 0, 0, 0.521);
+    display: inline-block;
+    padding: 6px;
+    color: var(--font01-cor);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.733);
+}
+
+.imagem
+{
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+}
+
+#img01
+{
+    background-image: url("/projeto-cifras/imagens/background001.jpg");
+}
+
+#img02
+{
+    background-image: url("/projeto-cifras/imagens/background002.jpg");
+}
+
+footer
+{
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+footer > a:hover
+{
+    text-decoration: underline;
 }
 
 
+@media (max-width: 635px)
+{
+    .cabecalho
+    {
+        padding: 40px 0px 40px 0px;
+    }
+    #cabecalho-titulo
+    {
+        font-size: 3em;
+    }
+    section
+    {
+        font-size: 1.4em;
+    }
+    /* .imagem > p
+    {
+        max-width: 300px;
+    } */
 
-
+}

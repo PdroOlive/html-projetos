@@ -10,7 +10,7 @@
 
 body
 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .cabecalho
@@ -28,6 +28,7 @@ body
     font-family: "Passion One", sans-serif;
     font-size: 40px;
     color: white;
+    font-variant: small-caps;
 }
 
 .cabecalho-link
@@ -44,6 +45,21 @@ body
 #link:hover
 {
     text-decoration: underline;
+}
+
+section
+{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: "Sriracha", sans-serif;
+}
+
+.imagem > p
+{
+    background-color: rgba(0, 0, 0, 0.247);
+    width: 500px;
 }
 
 

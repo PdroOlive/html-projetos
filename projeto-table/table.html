@@ -4,29 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <style>
+        table
+        {
+            width: 500px;
+            border-collapse: collapse;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .cabecalho
+        {
+            background-color: rgba(196, 196, 196, 0.753);
+            font-size: 1.2em;
+            
+        }
+        th
+        {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        .mudanca
+        {
+            color: rgb(113, 155, 51);
+        }
+        tr
+        {
+            background-color: rgba(238, 238, 238, 0.678);
+        }
+        td
+        {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .estado
+        {
+            padding: 0px 40px;
+        }
+        .estado-link
+        {
+            text-decoration: none;
+            color: black;
+        }
+        .estado-link:hover
+        {
+            text-decoration: underline;
+        }
+    </style>
+
 </head>
 <body>
     <table>
-        <tr>
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
-        </tr>
-        <tr>
-            <td>A2</td>
-            <td>B2</td>
-            <td>C2</td>
-        </tr>
-        <tr>
-            <td>A3</td>
-            <td>B3</td>
-            <td>C3</td>
-        </tr>
-        <tr>
-            <td>A4</td>
-            <td>B4</td>
-            <td>C4</td>
-        </tr>
+        <thead>
+            <tr class="cabecalho">
+                <th>Posição</th>
+                <th class="estado"> Estado</th>
+                <th>População</th>
+                <th>Mudança</th>
+                <th>Pais comparável</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1°</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/20px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" alt=""><a class="estado-link" href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_blank">São Paulo</a></td>
+                <td>44.441.238</td>
+                <td class="mudanca">+7.63%</td>
+                <td>Argentina (46.621.847)</td>
+            </tr>
+            <tr>
+                <td>2°</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/20px-Bandeira_de_Minas_Gerais.svg.png" alt=""><a class="estado-link" href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">Minas Gerais</a></td>
+                <td>20.538.718</td>
+                <td class="mudanca" >+4.81%</td>
+                <td>Burquina Fasso (20.903.273)</td>
+            </tr>
+            <tr>
+                <td>3°</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/20px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" alt=""><a class="estado-link" href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_blank">Rio de Janeiro</a></td>
+                <td>16.054.524</td>
+                <td class="mudanca">+0.40%</td>
+                <td>Camboja (16.718.965)</td>
+            </tr>
+            <tr>
+                <td>4°</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/20px-Bandeira_da_Bahia.svg.png" alt=""><a class="estado-link" href="https://pt.wikipedia.org/wiki/Bahia" target="_blank">Bahia</a></td>
+                <td>14.141.626</td>
+                <td class="mudanca">+0.89%</td>
+                <td>Zimbabwe (14.862.924)</td>
+            </tr>
+            <tr>
+                <td>5°</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/20px-Bandeira_do_Paran%C3%A1.svg.png" alt=""><a class="estado-link" href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">Paraná</a></td>
+                <td>11.444.380</td>
+                <td class="mudanca">+9.57%</td>
+                <td>Tunísia (11.818.619)</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>

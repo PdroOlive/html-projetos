@@ -4,46 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table
-        {
-            width: 400px;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        td
-        {
-            border: 1px solid black;
-            padding: 9px;
-        }
-    </style>
 </head>
+<style>
+    table
+    {
+        width: 600px;
+        border-collapse: collapse;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    th
+    {
+        border: 1px solid black;
+        padding: 6px;
+        background-color: #c4c4c4c0;
+    }
+    td
+    {
+        border: 1px solid black;
+        padding: 4px;
+        text-align: center;
+    }
+
+</style>
 <body>
     <table>
-        <tr>
-            <td colspan="4">A</td>
-            <td rowspan="4">B</td>
-        </tr>
-        <tr>
-            <td rowspan="4">C</td>
-            <td>D</td>
-            <td>E</td>
-            <td>F</td>
-        </tr>
-        <tr>
-            <td>G</td>
-            <td>H</td>
-            <td>I</td>
-        </tr>
-        <tr>
-            <td>J</td>
-            <td>L</td>
-            <td>M</td>
-        </tr>
-        <tr>
-            <td colspan="4">N</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Grupo</th>
+                <th>Nomes</th>
+                <th colspan="3">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Toy Story 3</td>
+                <td>Enrolados 2</td>
+                <td>Avatar</td>
+            </tr>
+            <tr>
+                <td>Luisa Monte</td>
+                <td>Mega Mente</td>
+                <td>Minions</td>
+                <td>Invisivel</td>
+            </tr>
+            <tr>
+                <td>Maria Eduarda</td>
+                <td>King Kong</td>
+                <td>Bob Marley</td>
+                <td>Wish</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Homens</th>
+                <td>Lucio Silva</td>
+                <td>Matrix</td>
+                <td>Spider Man 3</td>
+                <td>Incriveis</td>
+            </tr>
+            <tr>
+                <td>Marcio Ludico</td>
+                <td>Furia</td>
+                <td>Vingança</td>
+                <td>The Flash</td>
+            </tr>
+            <tr>
+                <td>Mario Gomes</td>
+                <td>Matrix 3</td>
+                <td>Tubarão</td>
+                <td>Chamado</td>
+            </tr>
+        </tbody>
     </table>
-    
 </body>
 </html>

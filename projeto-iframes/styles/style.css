@@ -44,10 +44,23 @@ div, iframe
     left: 50%;
     transform: translate(-50%, -50%);
     width: 268px;
-    height: 478px;
+    height: 479px;
     background-image: url("../imagens/tela-home.jpg");
     background-position: center center;
     background-size: cover;
+}
+
+#social
+{
+    display: flex;
+    justify-content: end;
+}
+
+.rede_social
+{
+    padding: 10px;
+    border-radius: 500px;
+    width: 70px;
 }
 
 

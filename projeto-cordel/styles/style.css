@@ -63,11 +63,13 @@ section
     padding-left: 30px;
     font-family: var(--font02);
     font-size: 2em;
+    background-color: white;
 }
 
 .normal > p
 {
     padding-bottom: 2em;
+    
 }
 
 .imagem > p

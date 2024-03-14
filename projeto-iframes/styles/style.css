@@ -35,6 +35,8 @@ main
     background-image: url("../imagens/frame-iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
+    filter: drop-shadow(1px 1px 8px black);
+    
 }
 
 div, iframe
@@ -58,9 +60,29 @@ div, iframe
 
 .rede_social
 {
-    padding: 10px;
-    border-radius: 500px;
-    width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 60px;
+    box-shadow: 0px 0px 8px 1px black;
+    box-sizing: border-box;
+    transition: box-shadow 0.5s, transform 0.5s;
 }
+
+.rede_social:hover
+{
+    border: 2px solid white;
+    transform: translate(-3%, -3%);
+    box-shadow: 0px 0px 6px 1px rgb(255, 255, 255);
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+
 
 

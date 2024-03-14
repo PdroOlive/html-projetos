@@ -31,13 +31,13 @@ main
     left: 50%;
     transform: translate(-50%, -50%);
     height: 627px;
-    width: 311px;
+    width: 350px;
     background-image: url("../imagens/frame-iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-div
+div, iframe
 {
     position: absolute;
     top: 50%;
@@ -49,4 +49,5 @@ div
     background-position: center center;
     background-size: cover;
 }
+
 

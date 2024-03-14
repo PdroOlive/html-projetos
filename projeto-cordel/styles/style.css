@@ -133,3 +133,20 @@ footer > a:hover
     } */
 
 }
+
+@media (max-width: 268px)
+{
+    #cabecalho-titulo
+    {
+        font-size: 2em;
+    }
+    section
+    {
+        font-size: 1em;
+    }
+    footer
+    {
+        font-size: 1em;
+    }
+    
+}

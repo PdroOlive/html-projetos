@@ -122,6 +122,13 @@ main
     margin-bottom: 1.5em;  
 }
 
+aside
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 
 #sessao1
 {
@@ -139,20 +146,26 @@ main
 
 .img
 {
+    height: 200px;
     overflow: hidden;
-    margin-bottom: 30px;
     border-radius: 8px;
-
+    margin-bottom: 30px;
 }
 
 
 .noticia-imagem
 {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.5s;
+
+}
+
+
+.noticia-imagem:hover
+{
+    transform: scale(1.15);
     
 }
 
@@ -171,11 +184,6 @@ main
     
 }
 
-.noticia-imagem:hover
-{
-    transform: scale(1.1);
-
-}
 .noticia-link:hover
 {
     color: rgb(99, 99, 99);

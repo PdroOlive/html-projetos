@@ -6,12 +6,20 @@
     <title>Formulários</title>
 </head>
 <body>
-    <form action="cadastro.php" method="post" autocomplete="off">
-        <p><label for="inome">Nome*: </label>
-            <input type="text" name="nome" id="inome"></p>
-        <p><label for="isobrenome">Sobrenome*:</label> 
-            <input type="text" name="sobrenome" id="isobrenome"> </p>
-        <input type="submit" value="Cadastrar">
+    <form action="cadastro.js" method="post" autocomplete="on">
+
+        <p>
+            <label for="iusuario">Usuário*: </label>
+            <input type="text" name="usuario" id="iusuario" required maxlength="10" placeholder="Entre com usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isenha">Senha*:</label> 
+            <input type="password" name="senha" id="isenha" required minlength="10" maxlength="18" placeholder="Entre com sua senha" autocomplete="current-password"> 
+        </p>
+        <p>
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
 </body>
 </html>

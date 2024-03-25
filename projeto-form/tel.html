@@ -7,12 +7,32 @@
 </head>
 <body>
     <form action="" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+
+            <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label> <br>
+            <input type="checkbox" name="volei" id="ivolei"> <label for="ivolei">Volei</label> <br>
+            <input type="checkbox" name="bas" id="ibas"> <label for="ibas">Basquete</label> <br>
+            <input type="checkbox" name="golf" id="igolf"> <label for="igolf">Golf</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sexo</legend>
+
+            <input type="radio" name="sexo" id="isexmas" value="M"> <label for="isexmas">Masculino</label>
+            <input type="radio" name="sexo" id="isexfem" value="F"> <label for="isexfem">Feminino</label>
+        </fieldset>
         <p>
-            <label for="itel">Telefone:</label>
-            <input type="tel" name="tel" id="itel" pattern="(\([1-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" autocomplete="tel" required >
+            <label for="icor">Cor:</label>
+            <input type="color" name="Cor" id="icor">
         </p>
         <p>
-            <input type="submit" value="Enviar">
+            <label for="inivel">Satisfação:</label>
+            <input type="range" name="nivel" id="inivel">
+        </p>
+        <p>
+            <label for="ifoto">Foto:</label>
+            <input type="file" name="Foto" id="ifoto">
         </p>
     </form>
 </body>

@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Formulários</title>
 </head>
 <body>
-    <form action="" method="post" autocomplete="on">
+    <main>
+    
+    <form action="https://projeto-cordel-livid.vercel.app/" target="_blank" method="post" autocomplete="on">
+        
 
-        <p>
-            <label for="iusuario">Usuário*: </label>
-            <input type="text" name="usuario" id="iusuario" required maxlength="30" placeholder="Entre com usuário" autocomplete="username">
-        </p>
-        <p>
-            <label for="isenha">Senha*:</label> 
-            <input type="password" name="senha" id="isenha" required minlength="10" maxlength="18" placeholder="Entre com sua senha" autocomplete="current-password"> 
-            - Permitido apenas 10 ou mais caracteres
-        </p>
-        <p>
-            <input type="submit" value="Cadastrar">
-            <input type="reset" value="Limpar">
-        </p>
+        <fieldset id="container">
+            <h1 class="titulo">Efetuar Login</h1>
+            
+            <p class="titulo">
+                <label for="iusuario">Usuário: </label>
+            </p>
+            <div >
+                <input class="usuario_senha" type="text" name="usuario" id="iusuario" required maxlength="30" placeholder="Seu usuário" autocomplete="name" >
+            </div>
+            <p class="titulo">
+                <label for="isenha">Senha: </label>
+            </p>
+            <div class="texto">
+                <input class="usuario_senha" type="password" name="senha" id="isenha" required minlength="10" maxlength="10" placeholder="Sua senha" autocomplete="new-password">
+                - Permitido apenas 10 ou mais caracteres
+            </div>
+            <p>
+                <input id="botao" type="submit" value="Entrar">
+            </p>
+        </fieldset>
     </form>
+    </main>
 </body>
 </html>

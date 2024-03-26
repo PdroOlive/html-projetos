@@ -5,10 +5,13 @@
 {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
+
 main
 {
     background-color: rgb(0, 0, 0);
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,7 +35,7 @@ h1
 }
 
 #container
-{
+{ 
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -81,4 +84,28 @@ h1
     color: white;
     box-shadow: 0px 0px 20px 2px #892be262;
 
+}
+
+@media (max-width: 627px)
+{
+    #container
+    {
+        padding: 20px;
+    }
+
+}
+@media (max-width: 462px)
+{
+    #container
+    {
+        padding: 10px;
+    }
+    .usuario_senha
+    {
+        width: 300px;
+    }
+    #botao
+    {
+        width: 150px;
+    }
 }

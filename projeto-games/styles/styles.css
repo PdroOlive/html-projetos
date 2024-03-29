@@ -14,7 +14,19 @@ body
     display: flex;
     justify-content: center;
 }
-img
+.container
+{
+    margin-top: 10px;
+    max-width: 100%;
+    width: 820px;
+    height: 340px;
+    display: flex;
+    gap: 10px;
+    margin-inline: 50px;
+}
+
+
+.image
 {
 
     width: 100%;
@@ -23,19 +35,28 @@ img
     
 }
 
-.container
+.logo
 {
-    margin-top: 10px;
-    width: 100%;
-    width: 820px;
-    height: 340px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-inline: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(153deg) brightness(103%) contrast(103%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
-
+#psn:hover
+{
+    filter: brightness(0) saturate(100%) invert(9%) sepia(84%) saturate(6569%) hue-rotate(208deg) brightness(95%) contrast(100%);
+}
+#xbox:hover
+{
+    filter: brightness(0) saturate(100%) invert(36%) sepia(66%) saturate(1055%) hue-rotate(82deg) brightness(82%) contrast(93%);
+}
+#nintendo:hover
+{
+    filter: brightness(0) saturate(100%) invert(16%) sepia(68%) saturate(4070%) hue-rotate(353deg) brightness(83%) contrast(91%);
+}
 .cards
 {
     min-width: 70px;
@@ -46,23 +67,21 @@ img
     flex-grow: 1;
     cursor: pointer;
     position: relative;
-    transition: flex-grow 0.5s;
- 
+    transition: flex-grow 0.5s cubic-bezier(0.6, 1, 0.3, 1); 
 }
 .cards:hover
 {
     flex-grow: 7;
 }
-.cards > img
+.cards > .image
 {
     position: absolute;
     object-fit: cover;
-    object-position: right;
-    filter: brightness(0.4);
+    filter: brightness(0.3);
     transition: filter 0.5s, width 0.5s;
 }
 
-.cards > img:hover
+.cards > .image:hover
 {
     filter: brightness(1);
 }

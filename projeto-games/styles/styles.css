@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
 *
@@ -10,21 +11,21 @@
 
 body
 {
+    margin-inline: 50px;
     height: 100vh;
     display: flex;
     justify-content: center;
 }
+
 .container
 {
     margin-top: 10px;
     max-width: 100%;
-    width: 820px;
     height: 340px;
     display: flex;
     gap: 10px;
-    margin-inline: 50px;
+    margin-bottom: 100px;
 }
-
 
 .image
 {
@@ -35,31 +36,8 @@ body
     
 }
 
-.logo
-{
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(153deg) brightness(103%) contrast(103%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-#psn:hover
-{
-    filter: brightness(0) saturate(100%) invert(9%) sepia(84%) saturate(6569%) hue-rotate(208deg) brightness(95%) contrast(100%);
-}
-#xbox:hover
-{
-    filter: brightness(0) saturate(100%) invert(36%) sepia(66%) saturate(1055%) hue-rotate(82deg) brightness(82%) contrast(93%);
-}
-#nintendo:hover
-{
-    filter: brightness(0) saturate(100%) invert(16%) sepia(68%) saturate(4070%) hue-rotate(353deg) brightness(83%) contrast(91%);
-}
 .cards
 {
-    min-width: 70px;
     height: 100%;
     border-radius: 30px;
     overflow: hidden;
@@ -67,21 +45,115 @@ body
     flex-grow: 1;
     cursor: pointer;
     position: relative;
-    transition: flex-grow 0.5s cubic-bezier(0.6, 1, 0.3, 1); 
+    transition: flex-grow 0.5s; 
 }
 .cards:hover
 {
     flex-grow: 7;
 }
-.cards > .image
+
+.image
 {
     position: absolute;
     object-fit: cover;
-    filter: brightness(0.3);
-    transition: filter 0.5s, width 0.5s;
+    filter: brightness(0.25);
+    transition: filter 0.5s;
 }
 
-.cards > .image:hover
+.image:hover
 {
-    filter: brightness(1);
+    filter: brightness(0.5);
+}
+
+.logo
+{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(153deg) brightness(103%) contrast(103%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#psn:hover
+{
+    filter: brightness(0) saturate(100%) invert(9%) sepia(84%) saturate(6569%) hue-rotate(208deg) brightness(95%) contrast(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#xbox:hover
+{
+    filter: brightness(0) saturate(100%) invert(36%) sepia(66%) saturate(1055%) hue-rotate(82deg) brightness(82%) contrast(93%);  
+}
+
+#nintendo:hover
+{
+    filter: brightness(0) saturate(100%) invert(16%) sepia(68%) saturate(4070%) hue-rotate(353deg) brightness(83%) contrast(91%);
+}
+
+.texto > h2
+{
+    font-family: "Quicksand", sans-serif;
+    text-decoration: underline;
+    font-size: 1.6em;
+    text-indent: 60px;
+    padding-bottom: 60px;
+}
+
+.texto > p
+{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.conteudo-img
+{
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+    max-width: 600px;
+    height: 400px;
+    margin: 1.5em auto;
+    
+}
+
+.conteudo-img > img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-0%, -25%);
+    width: 100%;
+    filter: brightness(0.4);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.conteudo-img > img:hover
+{
+    filter:brightness(0.4) blur(4px);
+}
+
+a
+{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-decoration: none;
+}
+
+a:hover::after
+{
+    content: "";
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }

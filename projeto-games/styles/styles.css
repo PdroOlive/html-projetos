@@ -11,11 +11,11 @@
 
 body
 {
-    padding-inline: 20%;
+    padding-inline:50px;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 820px;
+    width: 100%;
+    margin: auto;
 
 }
 
@@ -31,7 +31,6 @@ body
 
 .image
 {
-
     width: 100%;
     height: 100%;
     display: block;
@@ -45,7 +44,7 @@ body
     border-radius: 30px;
     overflow: hidden;
     display: flex;
-    flex-grow: 2;
+    flex-grow: 1;
     cursor: pointer;
     transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -70,6 +69,7 @@ body
 .logo
 {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(153deg) brightness(103%) contrast(103%);
+    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;

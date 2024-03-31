@@ -11,10 +11,11 @@
 
 body
 {
-    padding-inline: 50px;
+    padding-inline: 20%;
     height: 100vh;
-    max-width: 900px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -44,9 +45,9 @@ body
     border-radius: 30px;
     overflow: hidden;
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
     cursor: pointer;
-    transition: flex-grow 0.5s; 
+    transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .cards:hover
 {
@@ -113,19 +114,16 @@ body
     overflow: hidden;
     position: relative;
     border-radius: 30px;
-    max-width: 600px;
-    height: 400px;
-    margin: 1.5em auto;
-    
+    max-width: 500px;
+    height: 500px;
+    margin: 1.5em auto;    
 }
 
 .conteudo-img > img
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-0%, -25%);
+    object-fit: cover;
     width: 100%;
+    height: 100%;
     filter: brightness(0.4);
     transition: transform 0.5s, filter 0.5s;
 }

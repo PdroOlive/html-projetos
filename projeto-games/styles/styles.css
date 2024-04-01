@@ -133,7 +133,7 @@ body
     margin: 1.5em auto;    
 }
 
-.conteudo-img > a > img
+.conteudo-img > img
 {
     object-fit: cover;
     width: 100%;
@@ -142,7 +142,7 @@ body
     transition: transform 0.5s, filter 0.5s;
 }
 
-.conteudo-img > a > img:hover
+.conteudo-img > img:hover
 {
     filter:brightness(0.4) blur(4px);
 
@@ -170,3 +170,6 @@ body
 {
     border-radius: 30px;
 }
+
+
+

@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body
 {
@@ -22,40 +28,32 @@ div > input
 
 div > label > img
 {
-    
+    cursor: pointer;
     width: 100px;
     height: 100px;
-    padding-bottom: 40px;
     object-fit: cover;
-    
+    margin-bottom: 40px;
 }
 
-label
-{
-    position: absolute;
-    top: 40%;
-    transform-origin: translateY(0%);
-    transition: transform-origin 0.5s opacity 2s;
-    
-}
+
 
 #img00
 {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    display: none;
+    position: absolute;
+    visibility: hidden;
     opacity: 0;
-    
-    
+    top: 40%;
+    left: 45%;
+    transition: visibility 0.5s, opacity 0.5s;
 }
 
 
 
 #imenu:checked ~ * #img00
 {   
-    position: absolute; 
-    transform-origin: translateY(50%);
+    visibility: visible;
     opacity: 1;
-    display: block;
 }

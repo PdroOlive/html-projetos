@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+body
+{
+    background-color: gray;
+}
+
+div
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+div > input
+{
+    -webkit-appearance: none;
+ 
+}
+
+div > label > img
+{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#img00
+{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+
+label:hover #img00
+{
+    opacity: 1;
+    display: block;
+}

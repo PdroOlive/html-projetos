@@ -11,19 +11,32 @@ div
     display: flex;
     justify-content: center;
     position: relative;
+    
 }
 
 div > input
 {
-    -webkit-appearance: none;
- 
+    display: none;
+    
 }
 
 div > label > img
 {
+    
     width: 100px;
     height: 100px;
+    padding-bottom: 40px;
     object-fit: cover;
+    
+}
+
+label
+{
+    position: absolute;
+    top: 40%;
+    transform-origin: translateY(0%);
+    transition: transform-origin 0.5s opacity 2s;
+    
 }
 
 #img00
@@ -33,12 +46,16 @@ div > label > img
     object-fit: cover;
     display: none;
     opacity: 0;
-    transition: opacity 2s;
+    
+    
 }
 
 
-label:hover #img00
-{
+
+#imenu:checked ~ * #img00
+{   
+    position: absolute; 
+    transform-origin: translateY(50%);
     opacity: 1;
     display: block;
 }

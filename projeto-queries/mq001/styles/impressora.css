@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*
+{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6em;
+    font-size: 1.06em;
+}
+
+
+menu
+{
+    display: none;
+}
+
+article::after
+{
+    content: "Imprimido pelo site NewsYork";
+    font-size: 0.8em;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+article
+{
+    width: 100%;
+}

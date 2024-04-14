@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p id="oi">Aprendendo a usar <strong>DOM</strong> Js</p>
+    <div>Clique em mim</div>
+
+    <script>
+        let corpo = document.body
+        let p1 = document.querySelector("#oi")
+        p1.style.color = "blue"
+        document.writeln(p1.innerHTML)
+        let num1 = Number(prompt("Digite um número: "))
+        let num2 = Number(prompt("Digite um número: "))
+        let soma = num1 + num2
+        if(soma % 2 == 0)
+        {
+            corpo.style.background = "violet"
+        }
+        else
+        {
+            corpo.style.background = "gray"
+        }
+        document.write(`<br> ${soma}`)
+
+    </script>
+</body>
+</html>

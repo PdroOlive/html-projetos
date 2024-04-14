@@ -10,6 +10,7 @@
             background-color: #533d8f;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
         }
 
     </style>
@@ -19,10 +20,21 @@
 
 
     <script>
-        window.alert("Minha primeira mensagem")
-        window.confirm("Está Gostando?")
-        let nome = window.prompt("Qual é o seu nome?")
-        window.alert("O meu nome é "+ nome +" ")
+        let num = Number(window.prompt("Valor"))
+        let num2 = Number(window.prompt("Valor: "))
+        let soma = num + num2
+        document.write(`${soma}<br>`)
+        
+        if(soma % 2 == 0)
+        {
+            document.write("Par <br>")
+        }
+        else
+        {
+            document.write("Impar")
+        }
+
+        
     </script>
 </body>
 </html>

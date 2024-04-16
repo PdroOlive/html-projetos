@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px)
+{
+    .conteudo
+    {
+        padding-bottom: 50px;
+    }
+    .animes
+    {
+        width: 40vw;
+        height: 50vh;
+    }
+    #naruto-png
+    {
+        width: 30vw;
+    }
+
+    #aot-png
+    {
+        width: 30vw;
+    }
+
+    #jjk-png
+    {
+        width: 30vw;
+    }
+    
+    #dbs-png
+    {
+        width: 30vw;
+    }
+
+    #solo-png
+    {
+        width: 30vw;
+    }
+    
+    #tk-png
+    {
+        width: 30vw;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1300px)
+{
+    .conteudo
+    {
+        gap: 40px;
+        padding-bottom: 50px;
+    }
+    
+    .animes
+    {
+        width: 40vw;
+        height: 60vh;
+    }
+
+    #naruto-png
+    {
+        width: 30vw;
+    }
+
+    #aot-png
+    {
+        width: 30vw;
+    }
+
+    #jjk-png
+    {
+        width: 30vw;
+    }
+    
+    #dbs-png
+    {
+        width: 30vw;
+    }
+
+    #solo-png
+    {
+        width: 30vw;
+    }
+    
+    #tk-png
+    {
+        width: 30vw;
+    }
+}
+
+@media screen and (min-width: 1300px)
+{
+   
+    .conteudo
+    {
+        padding-bottom: 50px;
+    }
+    .animes
+    {
+        width: 600px;
+        height: 60vh;
+    }
+
+    #naruto-png
+    {
+        width: 400px;
+    }
+
+    #aot-png
+    {
+        width: 400px;
+    }
+
+    #jjk-png
+    {
+        width: 400px;
+    }
+    
+    #dbs-png
+    {
+        width: 400px;
+    }
+
+    #solo-png
+    {
+        width: 400px;
+    }
+    
+    #tk-png
+    {
+        width: 400px;
+    }
+    
+}

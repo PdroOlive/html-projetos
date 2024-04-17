@@ -3,132 +3,158 @@
 
 @media screen and (min-width: 992px) and (max-width: 1200px)
 {
+    main
+    {
+        margin: auto;
+        width: 990px;
+    }
+
+    #titulo-main
+    {
+        padding: 70px 0px 0px 55px;
+    }
     .conteudo
     {
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
     .animes
     {
-        width: 40vw;
-        height: 50vh;
+        width: 280px;
+        height: 400px;
     }
+
     #naruto-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #aot-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #jjk-png
     {
-        width: 30vw;
+        width: 200px;
     }
     
     #dbs-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #solo-png
     {
-        width: 30vw;
+        width: 200px;
     }
     
     #tk-png
     {
-        width: 30vw;
+        width: 200px;
     }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1300px)
 {
+    main
+    {
+        margin: auto;
+        width: 990px;
+    }
+    #titulo-main
+    {
+        padding: 70px 0px 0px 55px;
+    }
     .conteudo
     {
-        gap: 40px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
-    
     .animes
     {
-        width: 40vw;
-        height: 60vh;
+        width: 280px;
+        height: 400px;
     }
 
     #naruto-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #aot-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #jjk-png
     {
-        width: 30vw;
+        width: 200px;
     }
     
     #dbs-png
     {
-        width: 30vw;
+        width: 200px;
     }
 
     #solo-png
     {
-        width: 30vw;
+        width: 200px;
     }
     
     #tk-png
     {
-        width: 30vw;
+        width: 200px;
     }
 }
 
 @media screen and (min-width: 1300px)
 {
-   
+    main
+    {
+        margin: auto;
+        width: 990px;
+    }
+    #titulo-main
+    {
+        padding: 70px 0px 0px 55px;
+    }
     .conteudo
     {
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
     .animes
     {
-        width: 600px;
-        height: 60vh;
+        width: 280px;
+        height: 400px;
     }
 
     #naruto-png
     {
-        width: 400px;
+        width: 200px;
     }
 
     #aot-png
     {
-        width: 400px;
+        width: 200px;
     }
 
     #jjk-png
     {
-        width: 400px;
+        width: 200px;
     }
     
     #dbs-png
     {
-        width: 400px;
+        width: 200px;
     }
 
     #solo-png
     {
-        width: 400px;
+        width: 200px;
     }
     
     #tk-png
     {
-        width: 400px;
+        width: 200px;
     }
     
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eX003</title>
+
+    <style>
+        #area
+        {
+            font-size: 1.1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="area">
+            Interajaa
+
+        </div>
+    </main>
+
+    <script>
+        let a = window.document.getElementById("area")
+        a.addEventListener("click", clicar)
+
+        let e = window.document.getElementById("area")
+        e.addEventListener("mouseenter", entrar)
+
+        let s = window.document.getElementById("area")
+        s.addEventListener("mouseout", saiu)
+
+        function clicar()
+        {
+            a.innerText = "Clicou!!!"
+        }
+
+        function entrar()
+        {
+            e.innerText = "Intruso!!!!"
+        }
+
+        function saiu()
+        {
+            s.innerText = "Interajaa"
+        }
+    </script>
+</body>
+</html>

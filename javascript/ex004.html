@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eX004</title>
+</head>
+<body>
+    <main>
+        <h1>Somando Valores</h1>
+        <label for="inum1">
+            <p>Entre com um valor: </p>
+        </label>
+        <input type="number" name="num1" id="inum1">
+        <label for="inum2">
+            <p>Entre com outro valor: </p>
+        </label>
+        <input type="number" name="num2" id="inum2">
+        <input type="button" value="Somar" onclick="Somar()">
+        <div id="isoma">Soma: </div>
+    </main>
+
+    <script>
+        function Somar()
+        {
+           let num1 = window.document.getElementById("inum1")
+           let num2 = window.document.getElementById("inum2")
+           let soma = window.document.getElementById("isoma")
+           let vnum1 = Number(num1.value)
+           let vnum2 = Number(num2.value)
+           let soma2 = vnum1 + vnum2
+           soma.innerHTML = `A soma entre ${vnum1} + ${vnum2} é ${soma2}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text
+        {
+            font-size: 1.1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sistema de Multas</h1>
+        <label for="iel"> Velocidade: </label>
+        <input type="number" name="vel" id="iel"> Km/h
+        <input type="button" value="Verificar" onclick="Clicar()">
+        <p id="text"></p>
+    </main>
+
+    <script>
+        
+        function Clicar()
+        {
+            let vel = document.getElementById("iel")
+            let texto = document.getElementById("text") 
+            let v = Number(vel.value)
+
+            if(v > 60.5)
+            {
+                
+                texto.innerText = `Você ultrapassou a velocidade permitida MULTADO!!!`
+                texto.style.color = "red"
+            }
+            else
+            {
+                texto.innerText = `Velocidade adequada!!!`
+                texto.style.color = "green"
+            }
+        }
+      
+    </script>
+</body>
+</html>

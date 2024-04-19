@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #texto
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main>
+        <h1>Sistema de Multas</h1>
+        <h2 id="titulo"></h2>
+        <p id="texto"></p>
+
+
+    </main>
+
+    <script>
+        let vel = Number(prompt("Velocidade: "))
+        let titulo = document.getElementById("titulo")
+        let texto = document.getElementById("texto")
+        titulo.innerText = `Velocidade do carro ${vel}Km/h`
+        if(vel > 60.5)
+        {
+            texto.innerText = "Você ultrapasssou a velocidade permitida MULTADO!!!"
+            texto.style.color = "red"
+        }
+        else
+        {
+            texto.innerText = "Velocidade adequada!!!"
+            texto.style.color = "green"
+        }
+    </script>
+</body>
+</html>

@@ -32,12 +32,12 @@
             if(v > 60.5)
             {
                 
-                texto.innerText = `Você ultrapassou a velocidade permitida MULTADO!!!`
+                texto.innerHTML = `Você ultrapassou a velocidade permitida <strong>MULTADO!!!</strong>`
                 texto.style.color = "red"
             }
             else
             {
-                texto.innerText = `Velocidade adequada!!!`
+                texto.innerHTML = `Velocidade adequada!!!`
                 texto.style.color = "green"
             }
         }

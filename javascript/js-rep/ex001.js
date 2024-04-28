@@ -1,9 +1,9 @@
-let cont = 1
-let tabuada = 0
-let num = 8
-while(cont <= 10)
+let num1 = 5
+let num2 = 12
+let pulou = 2
+
+while(num1 <= num2)
 {
-    tabuada = cont * num
-    console.log(`${num} x ${cont} = ${tabuada}`)
-    cont+=1
+    console.log(num1)
+    num1 ++
 }

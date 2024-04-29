@@ -4,13 +4,37 @@ function clicou()
     let num2 = document.getElementById("inum2")
     let pulou = document.getElementById("ipular")
     let res = document.getElementById("resul")
+    let n1 = Number(num1.value);
+    let n2 = Number(num2.value);
+    let pass = Number(pulou.value);
 
-    n1 = Number(num1.value)
-    n2 = Number(num2.value)
-    pass = Number(pulou.value)
-
-    for(n1 = n1; n1 <= n2; n1 += pass)
+    if(n1 <= 0 || n2 == 0 || pass == 0 || n1 == n2)
     {
-        res.innerText =  `${n1}`
+        alert("Erro Insira um número válido!")
     }
+    else if(pass > n2)
+    {
+        alert("Erro Insira um número válido!")
+    }
+    else if (n1 > n2)
+    {
+        res.innerHTML = `Contando: `
+        while(n1 >= n2)
+        {
+            res.innerHTML += `&#128073; ${n1} `
+            n1 -= pass
+        }
+        res.innerHTML += `&#x1F3C1;`
+    }
+    else
+    {
+        res.innerHTML = `Contando: `
+        while(n1 <= n2)
+        {
+            res.innerHTML += `&#128073; ${n1} `
+            n1 += pass
+        }
+        res.innerHTML += `&#x1F3C1;`
+    }
+ 
 }

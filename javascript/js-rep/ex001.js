@@ -1,9 +1,11 @@
-let num1 = 5
-let num2 = 12
-let pulou = 2
+let num = 8
+let cont = 1
+let res = 0
 
-while(num1 <= num2)
+
+while(cont <= 10)
 {
-    console.log(num1)
-    num1 ++
+    res = num * cont
+    console.log(res)
+    cont++
 }

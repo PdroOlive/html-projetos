@@ -11,29 +11,25 @@
         <h1>Vamos Contar</h1>
     </header>
     <main>
-        <section>
+        <section id="container">
             
-            <p>
-                <label for="inum1">Entre com um número</label>
-                <input type="number" name="num1" id="inum1">
+            <p class="entrada">
+                <label for="inum1">Inicio:</label>
+                <input type="number" name="num1" id="inum1" class="input">
             </p>
-            <p>
-                <label for="inum2">Entre com um número</label>
-                <input type="number" name="num2" id="inum2">
-                * maior que o primeiro
+            <p class="entrada">
+                <label for="inum2">Fim:</label>
+                <input type="number" name="num2" id="inum2" class="input">
             </p>
-            <p>
-                <label for="ipular">Pular</label>
-                <input type="number" name="pular" id="ipular">
+            <p class="entrada">
+                <label for="ipular">Pular:</label>
+                <input type="number" name="pular" id="ipular" class="input">
             </p>
-            <p>
-                <input type="submit" value="Enviar" onclick="clicou()">
+            <p id="botao">
+                <input type="button" value="Enviar" onclick="clicou()">
             </p>
-           
         </section>
-        <div id="resul">
-
-        </div>
+        <div id="resul"></div>
     </main>
     <footer>
 

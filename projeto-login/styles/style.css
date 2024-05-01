@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+/* PALETAS DE CORES
+#A6033F - ROSA ESCURO
+#F20574 - LILÁS ROSADO
+#4B53F2 - AZUL MARINHO
+#023373 - AZUL MEDIO
+#011C40 - AZUL ESCURO
+*/
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #023373;
+    height: 100vh;
+    max-width: 100vw;
+    padding-top: 10em;
+}
+
+main
+{
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px black;
+}
+
+#container-img
+{
+    max-width: 900px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+
+   
+}
+#container-img > img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px 9px 0px 0px;
+}
+
+#conteudo-login
+{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+#conteudo-login > h1
+{
+    font-family: "Dosis", sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+#texto
+{
+    text-align: center;
+    padding-block: 15px;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.label
+{
+    background-color: #023373;
+    height: 60px;
+    width: 50px;
+    border-radius: 9px 0px 0px 9px;
+    position: relative;
+}
+
+.cor-icon
+{
+    filter: brightness(0) saturate(100%) invert(19%) sepia(80%) saturate(5550%) hue-rotate(329deg) brightness(64%) contrast(106%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    object-fit: cover;
+    padding-left: 5px;
+}
+
+.login-senha
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inputs
+{
+    width: 300px;
+    height: 60px;
+    margin-block: 10px;
+    border-radius: 0px 9px 9px 0px;
+    border: 6px solid #023373;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-indent: 10px;
+    outline: none;
+    transition: background-color 0.5s;
+}
+
+.inputs:hover
+{
+    background-color: #0233736e;
+
+}
+
+.inputs:focus
+{
+    background-color: #0233736e;
+}
+
+.botao
+{
+    width: 350px;
+    height: 50px;
+    border: none;
+    background-color: #023373;
+    border-radius: 9px;
+    border: 3px solid #023373;
+    margin-block-end: 10px;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.5s, border 0.5s ease-out;
+}
+
+.botao:hover
+{
+    background-color: #0233736e;
+    border: 3px solid #A6033F;
+}
+
+#botao-senha
+{
+    background-color: white;
+    border: 3px solid #023373;
+    color: #A6033F;
+    text-align: center;
+}
+
+#botao-senha:hover
+{
+    border: 3px solid #A6033F;
+    
+}
+
+#img-senha
+{
+    position: relative;
+}
+
+#img-senha > img
+{
+    position: absolute;
+    left: 75%;
+    transform: translate(-75%, -180%);
+
+}

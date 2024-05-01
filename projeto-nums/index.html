@@ -12,15 +12,18 @@
     </header>
     <main>
         <section>
-            <p>
+            <p class="texto">
                 <label for="inum">Número de 1 a 100: </label>
                 <input type="number" name="num" id="inum">
-                <input type="button" value="Adicionar" onclick="clicou()">
+                <input type="button" id="botao" value="Adicionar" onclick="clicou()">
             </p>
-            <div id="lista">
-                
+            <div class="texto">
+                <div id="lista"></div>
+                <p><input type="button" id="button" value="Analisar" onclick="Analisar()"></p>
+            
+
+                <div id="res"></div>
             </div>
-            <p><input type="button" value="Verificar"></p>
         </section>
     </main>
     <footer></footer>

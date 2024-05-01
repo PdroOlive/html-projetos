@@ -1,12 +1,5 @@
-let vel = 60
+let num = 8
 
-console.log(`A velocidade do seu carro é ${vel} Km/h`)
+num **= 2
 
-if(vel > 60.5)
-{
-    console.log(`Voçê ultrapassou a velocidade permitida MULTADO!!!`)
-}
-else
-{
-    console.log(`Velocidade adequada!!`)
-}
+console.log(num)

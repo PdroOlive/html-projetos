@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
     <title>Login</title>
 </head>
 <body>
@@ -13,27 +14,27 @@
             <article id="conteudo-login">
                 <h1>Login</h1>
                 <p id="texto">Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="" method="post">
+                <form action="" method="post" autocomplete="on">
                     <p class="login-senha">
                         <label class="label" for="iemail">
                             <img class="cor-icon" src="img/login-icon.svg" alt="">
                         </label>
-                        <input type="email" name="email" class="inputs" id="iemail">
+                        <input type="email" name="email" class="inputs" id="iemail" autocomplete="email" required placeholder="Insira seu E-mail">
                     </p>
                     <p class="login-senha">
                         <label class="label" for="isenha">
                             <img class="cor-icon" src="img/senha-icon.svg" alt="">
                         </label>
-                        <input type="password" name="senha" class="inputs"  id="isenha">
+                        <input type="password" name="senha" class="inputs"  id="isenha" autocomplete="new-password" required minlength="8" maxlength="8" placeholder="Insira sua Senha">
                     </p>
                     <p class="login-senha">
                         <input type="button" class="botao" value="Entrar">
                     </p>
                     <p id="senha" class="login-senha">
                         <input type="button" id="botao-senha" class="botao" value="Esqueci a senha">
-                        <div id="img-senha">
+                        <label id="img-senha" for="botao-senha">
                             <img src="img/chave-icon.svg" alt="">
-                        </div>
+                        </label>
                     </p>
                 </form>
 

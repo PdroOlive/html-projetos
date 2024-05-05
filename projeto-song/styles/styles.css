@@ -8,11 +8,12 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    color: white;
 }
 
 body
 {
-    background-color: brown;
+    background: linear-gradient(0deg, rgb(59, 26, 26) 0%, rgba(135,0,0,1) 90%, rgba(90,0,0,1) 100%, rgba(111,0,0,1) 100%, rgba(255,0,0,1) 100%);
     max-width: 100vw;
     height: 100vh;
     display: flex;
@@ -29,7 +30,6 @@ main
 
 h5
 {
-    color: white;
     text-align: center;
 }
 
@@ -44,7 +44,9 @@ h5
     width: 100%;
     height: 100%;
     border: 4px solid black;
+    filter: none !important; 
 }
+
 
 #conteudo1
 {
@@ -56,11 +58,18 @@ h5
 #conteudo1 > p
 {
     font-size: 0.8rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.623);
 }
 
 #conteudo2
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+img
+{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
+}

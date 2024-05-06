@@ -10,34 +10,46 @@
     <main>
         <h5>Playlist</h5>
         <div id="container-img">
-            <img src="images/image.png" alt="">
+            <img id="img-album" alt="Foto do Album">
         </div>
+
         <section id="container-conteudo">
-            <h1>That's What I Like</h1>
+
             <section id="conteudo1">
-                <p>Bruno Mars</p>
                 <div>
-                    <img width="25px" src="images/heart.svg" alt="Botão coração (like)">
+                    <h1 id="nome-musica">nome da musica</h1>
+                    <p id="nome-artista">nome do artista</p>
                 </div>
+                <button>
+                    <img width="25px" id="botao-heart" src="images/heart.svg" alt="Botão coração (like)">
+                </button>
             </section>
+
+            <audio id="audio" ></audio>
+            <div id="progress">
+                <div id="current-progress"></div>
+            </div>
+
             <section id="conteudo2">
-                <div>
-                    <img width="25px" src="images/arrows.svg" alt="Botão embaralhar">
-                </div>
-                <div>
-                    <img width="40px" src="images/voltar.svg" alt="Botão voltar">
-                </div>
-                <div>
-                    <img width="50px" src="images/play.svg" alt="Botão play">
-                </div>
-                <div>
-                    <img width="40px" src="images/passar.svg" alt="Botão passar">
-                </div>
-                <div>
-                    <img width="25px" src="images/repeat.svg" alt="Botão repetir">
-                </div>
+                <button id="botao-arrows">
+                    <img width="25px"  src="images/arrows.svg" alt="Botão embaralhar">
+                </button>
+                <button id="botao-voltar">
+                    <img width="40px" id="img-voltar"  src="images/voltar.svg" alt="Botão voltar">
+                </button>
+                <button id="botao-play">
+                    <img width="60px" id="img-play" src="images/play.svg" alt="Botão play">
+                </button>
+                <button  id="botao-passar">
+                    <img width="40px" id="img-passar" src="images/passar.svg" alt="Botão passar">
+                </button>
+                <button id="botao-repetir">
+                    <img width="25px"  src="images/repeat.svg" alt="Botão repetir">
+                </button>
             </section>
+
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>

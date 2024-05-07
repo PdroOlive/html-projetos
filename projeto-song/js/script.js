@@ -8,6 +8,7 @@ const passar = document.getElementById("img-passar"); // Manipular o Botao Passa
 const bar = document.getElementById("current-progress");  
 const barProgress = document.getElementById("container-bar");  
 const arrowButton = document.getElementById("img-arrows"); 
+const repeatButton = document.getElementById("img-repeat"); 
 
 const Mars = { // objeto com as informaçoes do cantor Bruno mars
     songName: "That's What I Like",

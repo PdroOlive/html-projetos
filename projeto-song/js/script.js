@@ -130,7 +130,7 @@ function updateBar()
 function jumpTo(event)
 {
     const width = barProgress.clientWidth;
-    const clickPosition = event.offsetX
+    const clickPosition = event.offsetX;
     const jumpTime = (clickPosition/width)* song.duration;
     song.currentTime = jumpTime;
 }

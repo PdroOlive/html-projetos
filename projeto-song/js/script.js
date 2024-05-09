@@ -11,31 +11,33 @@ const arrowButton = document.getElementById("img-arrows");
 const repeatButton = document.getElementById("img-repeat"); 
 const actualTime = document.getElementById("actual-time");
 const totalTime = document.getElementById("total-time");
-
+const likeButton = document.getElementById("botao-heart");
 
 const Mars = { // objeto com as informaçoes do cantor Bruno mars
     songName: "That's What I Like",
     artist: "Bruno Mars",
     estilo: "linear-gradient(0deg, rgb(59, 26, 26) 0%, rgba(135,0,0,1) 90%, rgba(90,0,0,1) 100%, rgba(111,0,0,1) 100%, rgba(255,0,0,1) 100%)",
-    file: "bruno-mars"
-
+    file: "bruno-mars",
+    likeOn: false,
 }
 
 const Savage = { // Objeto com as informações do cantor 21 Savage
     songName: "Glock in my Lap",
     artist: "21 Savage",
     estilo: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(153,116,0,1) 100%, rgba(255,193,0,1) 100%)",
-    file: "savage"
+    file: "savage",
+    likeOn: false,
 }
 
 const Fun = { // Objeto com as informações do cantor Fun
     songName: "We Are Young",
     artist: "Fun",
     estilo: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(38,17,17,1) 55%, rgba(59,26,26,1) 85%, rgba(59,26,26,1) 100%)",
-    file: "fun"
+    file: "fun",
+    likeOn: false,
 }
 
-const playlist = [Mars, Savage, Fun]; // Vetor criado para servir de playlist (contem todos os objetos criados acima)
+const playlist = JSON.parse(localStorage.getItem("Curtidas")) ?? [Mars, Savage, Fun]; // Vetor criado para servir de playlist (contem todos os objetos criados acima)
 let index = 0;
 let randomArray = [...playlist];
 let playing = false; // Variavel para coletar se o botao play esta ativo ou nao (true or false)
@@ -80,6 +82,7 @@ function loadingSong() // função que ira dinamizar o nome da musica, cantor e 
     songName.innerText = randomArray[index].songName; // busca na playlist o objeto songName que contem o nome da musica
     artistName.innerText = randomArray[index].artist; // busca na playlist o objeto artist que contem o nome do cantor
     document.body.style.backgroundImage = randomArray[index].estilo;
+    likeSwitch();
 }
 
 function voltarSong() // função que testa, dado um index ira decrementar(trocar de musica voltar)
@@ -200,6 +203,34 @@ function updateTotalTime()
     totalTime.innerText = FormatTime(song.duration);
 }
 
+function likeSwitch()
+{
+    if(randomArray[index].likeOn === true)
+    {
+        likeButton.src = `images/heart-fill.svg`;
+        likeButton.style.filter = `brightness(0) saturate(100%) invert(63%) sepia(29%) saturate(1456%) hue-rotate(50deg) brightness(109%) contrast(83%)`;
+    }
+    else
+    {
+        likeButton.src = `images/heart.svg`;
+        likeButton.style.filter = `brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%)`;
+    }
+
+}
+
+function likeUpdate()
+{
+    if(randomArray[index].likeOn === false)
+    {
+        randomArray[index].likeOn = true;
+    }
+    else
+    {
+        randomArray[index].likeOn = false;
+    }
+    likeSwitch();
+    localStorage.setItem("Curtidas", JSON.stringify(playlist));
+}
 
 
 loadingSong(); // o javascript carrega as informações da musica assim que abrir o site
@@ -213,3 +244,4 @@ arrowButton.addEventListener("click", shuffleButton);
 repeatButton.addEventListener("click", dynamicRepeat);
 song.addEventListener("ended", nextOrRepeat);
 song.addEventListener("loadedmetadata", updateTotalTime)
+likeButton.addEventListener("click", likeUpdate);

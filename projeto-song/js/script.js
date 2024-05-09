@@ -9,6 +9,9 @@ const bar = document.getElementById("current-progress");
 const barProgress = document.getElementById("container-bar");  
 const arrowButton = document.getElementById("img-arrows"); 
 const repeatButton = document.getElementById("img-repeat"); 
+const actualTime = document.getElementById("actual-time");
+const totalTime = document.getElementById("total-time");
+
 
 const Mars = { // objeto com as informaçoes do cantor Bruno mars
     songName: "That's What I Like",
@@ -33,10 +36,12 @@ const Fun = { // Objeto com as informações do cantor Fun
 }
 
 const playlist = [Mars, Savage, Fun]; // Vetor criado para servir de playlist (contem todos os objetos criados acima)
+let index = 0;
 let randomArray = [...playlist];
 let playing = false; // Variavel para coletar se o botao play esta ativo ou nao (true or false)
 let shuffled = false;
-let index = 0;
+let repeatOn = false;
+
 
 
 
@@ -74,21 +79,7 @@ function loadingSong() // função que ira dinamizar o nome da musica, cantor e 
     song.src = `songs/${randomArray[index].file}.mp3`; // busca na playlist o objeto file que contem o audio 
     songName.innerText = randomArray[index].songName; // busca na playlist o objeto songName que contem o nome da musica
     artistName.innerText = randomArray[index].artist; // busca na playlist o objeto artist que contem o nome do cantor
-    if(index === 0) // dependo do index o background gradient ira mudar
-    {
-        document.body.style.backgroundImage = randomArray[0].estilo;
-        img.style.boxShadow = "0px 0px 10px black";
-    }
-    else if(index === 1)
-    {
-        document.body.style.backgroundImage = randomArray[1].estilo;
-        img.style.boxShadow = "0px 0px 10px black";
-    }
-    else if (index === 2)
-    {
-        document.body.style.backgroundImage = randomArray[2].estilo;
-        img.style.boxShadow = "0px 0px 10px black";
-    }
+    document.body.style.backgroundImage = randomArray[index].estilo;
 }
 
 function voltarSong() // função que testa, dado um index ira decrementar(trocar de musica voltar)
@@ -121,10 +112,11 @@ function passarSong() // função que testa, dado um index ira incrementar (troc
 
 
 
-function updateBar()
+function updateProgress()
 {
     const barWidth = (song.currentTime/song.duration)*100;
     bar.style.setProperty("--update", `${barWidth}%`);
+    actualTime.innerText = FormatTime(song.currentTime);
 }
 
 function jumpTo(event)
@@ -145,7 +137,7 @@ function shuffleArray(preArray)
        let suport = preArray[currentIndex];
        preArray[currentIndex] = preArray[randomIndex];
        preArray[randomIndex] = suport;
-       currentIndex -= 1
+       currentIndex -= 1;
     }
 }
 
@@ -166,11 +158,58 @@ function shuffleButton()
 
 }
 
+function dynamicRepeat()
+{
+    if(repeatOn === false)
+    {
+        repeatOn = true;
+        repeatButton.style.filter = `brightness(0) saturate(100%) invert(63%) sepia(29%) saturate(1456%) hue-rotate(50deg) brightness(109%) contrast(83%)`;
+    }
+    else
+    {
+        repeatOn = false;
+        repeatButton.style.filter = `brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%)`;
+    }
+}
+
+function nextOrRepeat()
+{
+    if(repeatOn === false)
+    {
+        passarSong();
+    }
+    else
+    {
+        Play()
+    }
+}
+
+function FormatTime(timeOrgin)
+{
+    let hours = Math.floor(timeOrgin / 3600);
+    let min = Math.floor((timeOrgin - hours * 3600)/60);
+    let sec = Math.floor(timeOrgin - hours * 3600 - min * 60);
+
+    return `${min.toString().padStart(2, "0")}:${sec.toString().padStart(2, "0")}`;
+}
+
+
+function updateTotalTime()
+{
+    
+    totalTime.innerText = FormatTime(song.duration);
+}
+
+
+
 loadingSong(); // o javascript carrega as informações da musica assim que abrir o site
 
 play.addEventListener("click", playDecider); // evento que implementa a função playDecider
 voltar.addEventListener("click", voltarSong); // evento que implementa a função voltarSong
 passar.addEventListener("click", passarSong); // evento que implementa a função passarSong
-song.addEventListener("timeupdate", updateBar);
+song.addEventListener("timeupdate", updateProgress);
 barProgress.addEventListener("click", jumpTo);
-arrowButton.addEventListener("click", shuffleButton)
+arrowButton.addEventListener("click", shuffleButton);
+repeatButton.addEventListener("click", dynamicRepeat);
+song.addEventListener("ended", nextOrRepeat);
+song.addEventListener("loadedmetadata", updateTotalTime)

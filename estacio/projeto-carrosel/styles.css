@@ -3,8 +3,14 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
 
+button
+{
+  color: black;
+}
 
 body
 {
@@ -41,8 +47,6 @@ body
 }
 h1
 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -51,4 +55,55 @@ h1
 span
 {
   margin-left: 10px;
+}
+
+#container-content p
+{
+  margin-block-end: 40px;
+}
+
+#container-content, .container-button p
+{
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container-button
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+  
+}
+
+.container-button button
+{
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+}
+.container-button div
+{
+  max-width: 400px;
+  height: 300px;
+  margin: auto;
+  filter: grayscale(100%);
+}
+.container-button img
+{
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s, box-shadow 0.5s;
+}
+
+.container-button img:hover
+{
+  filter: brightness(0.3);
+  box-shadow: 0px 0px 10px 5px white;
 }

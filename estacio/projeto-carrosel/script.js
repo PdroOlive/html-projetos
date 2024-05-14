@@ -2,8 +2,20 @@ let carouselImages = document.querySelector('.carousel-images');
 let images = document.querySelectorAll('.carousel-images img');
 let currentIndex = 0;
 let totalImages = images.length;
-let imageYearlyOn = document.getElementById("img-anual");
-let imageYearlyOff = document.getElementById("img-anual");
+let onImgYearly = document.querySelector("#image-yearly");
+let textYearly = document.querySelector("#image-yearly p");
+
+
+function createObjectCard(height, text)
+{
+  this.height = height,
+  this.text = text
+}
+
+let imgYearly = new createObjectCard("500px", `Beneficio`);
+let imgMonthly = new createObjectCard("500px", `Olar`);
+let imgWeekly = new createObjectCard("500px", `oiiii`);
+
 
 function nextImage() {
   currentIndex = (currentIndex + 1) % totalImages;
@@ -16,20 +28,19 @@ function updateCarousel() {
 }
 
 
-function mouseOnImage()
+function imgSwitchOn()
 {
-  imageYearlyOn.innerText = `Oi`;
-
+  textYearly.innerHTML = imgYearly.text;
+  onImgYearly.style.height = imgYearly.height;
 }
 
-function mouseOffImage()
+function imgSwitchOff()
 {
-  
+  textYearly.innerHTML = ``;
+  onImgYearly.style.height = ``;
 }
 
 
-
-
-imageYearlyOn.addEventListener("mouseenter", mouseOnImage);
-imageYearlyOff.addEventListener("mouseout", mouseOffImage);
+onImgYearly, .addEventListener("mouseenter", imgSwitchOn);
+onImgYearly.addEventListener("mouseout", imgSwitchOff);
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

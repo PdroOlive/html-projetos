@@ -69,6 +69,7 @@ span
   font-weight: 600;
 }
 
+
 .container-button
 {
   display: flex;
@@ -90,20 +91,31 @@ span
 }
 .container-button div
 {
+  position: relative;
   max-width: 400px;
   height: 300px;
   margin: auto;
   filter: grayscale(100%);
+  transition: height 0.5s;
 }
-.container-button img
+.container-img img
 {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   transition: filter 0.5s, box-shadow 0.5s;
 }
 
-.container-button img:hover
+.container-img img:hover
 {
   filter: brightness(0.3);
   box-shadow: 0px 0px 10px 5px white;
+}
+
+.container-img p
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

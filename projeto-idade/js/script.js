@@ -66,3 +66,6 @@ function clicar()
     div.appendChild(img)
 
 }
+
+
+

@@ -1,65 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrossel de Imagens</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <main>
+    
+    <main id="container-main">
         <div class="carousel">
-          <div class="carousel-images">
-            <img src="imagem1.jpg" alt="Imagem 1">
-            <img src="imagem2.png" alt="Imagem 2">
-            <img src="imagem3.jpg" alt="Imagem 3">
-          </div>
-          <h1>PROJETINHO<span>FELLAS</span></h1>
+            <div class="carousel-images">
+                <img src="imagem1.jpg" alt="Imagem 1">
+                <img src="imagem2.png" alt="Imagem 2">
+                <img src="imagem3.jpg" alt="Imagem 3">
+            </div>
+            <h1>PROJETINHO<span>FELLAS</span></h1>
         </div>
         <section id="container-content">
-          <p>
-            Endereço: Duque de Caxias N°46 - Entre a Rua Bruno e Rua Marrone 
-          </p>
-          <p>
-            Venha fazer parte do PROJETINHO.... está esperando as férias? vem logo pra meter o shape antes!!! 
-          </p>
+            <p>
+                Endereço: Duque de Caxias N°46 - Entre a Rua Bruno e Rua Marrone
+            </p>
+            <p>
+                Venha fazer parte do PROJETINHO.... está esperando as férias? vem logo pra meter o shape antes!!!
+            </p>
         </section>
         <section class="container-button">
-          <p>
-            OFERTAS ABAIXO VÁLIDAS POR 72HRS:
-          </p>
-          <section class="container-button">
-              <div class="container-img" id="image-yearly">
-                <img src="img/anual.jpg" alt="Foto Anual">
-                <p></p>
-              </div>
-              <p>
-                PLANO ANUAL: R$ 1.368.00 - 5% OFF!!!
-              </P>
-              <button> Tá ruim? Matricula ae</button>
-          </section>
-          <section  class="container-button">
-              <div class="container-img" id="image-monthly">
-                <img src="img/mensal.jpg" alt="Foto mensal">
-                <p></p>
-              </div>
-              <p>
-                PLANO MENSAL: R$ 120.00
-              </p>
-              <button>Tá ruim? Matricula ae</button>
-          </section>
-          <section  class="container-button">
-              <div class="container-img" id="image-weekly">
-                <img src="img/semanal.jpg" alt="Foto semanal">
-                <p></p>
-              </div>
-              <p>
-                PLANO SEMANAL: R$ 64.99
-              </p>
-              <button>Tá ruim? Matricula ae</button>
-          </section>
+            
+            <p>
+                OFERTAS ABAIXO VÁLIDAS POR 72HRS:
+            </p>
+            <section class="container-button">
+                <div class="container-img" id="image-yearly" onclick="imgSwitchOn(onImgYearly, textYearly)" onmouseleave="imgSwitchOff(onImgYearly, textYearly)">
+                    <img src="img/anual.jpg" alt="Foto Anual">
+                    <ul>
+                        <li> <img class="image-svg" src="img/washer.svg" alt=""> Sem Restrição de horário</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Acesso livre a todas as aulas</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Direito a um armário pessoal</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Direito a vaga no estacionamento</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Participa dos sorteios mensais</li>
+                    </ul>
+                    
+                </div>
+                
+                <p>
+                    PLANO ANUAL: R$ 1.368.00 - 5% OFF!!!
+                </P>
+                <button onclick="showModal()"> Tá ruim? Matricula ae</button>
+            </section>
+     
+            <section class="container-button">
+                <div class="container-img" id="image-monthly" onclick="imgSwitchOn(onImgMonthly, textMonthly)" onmouseleave="imgSwitchOff(onImgMonthly, textMonthly)">
+                    <img src="img/mensal.jpg" alt="Foto mensal">
+                    <ul>
+                        <li> <img class="image-svg" src="img/washer.svg" alt=""> Horário: 13hrs ás 17hrs</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> De Segunda á Sexta</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito a armário</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito ao estacionamento</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem sorteios</li>
+                    </ul>
+                </div>
+                <p>
+                    PLANO MENSAL: R$ 120.00
+                </p>
+                
+                <button>Tá ruim? Matricula ae</button>
+            </section>
+            <section class="container-button">
+                <div class="container-img" id="image-weekly" onclick="imgSwitchOn(onImgWeekly, textWeekly)" onmouseleave="imgSwitchOff(onImgWeekly, textWeekly)">
+                    <img src="img/semanal.jpg" alt="Foto semanal">
+                    <ul>
+                        <li> <img class="image-svg" src="img/washer.svg" alt=""> Horário: 15hrs ás 19hrs</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> De Segunda á Sexta</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito a armário</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito ao estacionamento</li>
+                        <li><img class="image-svg" src="img/washer.svg" alt=""> Sem sorteios</li>
+                    </ul>                
+                </div>
+                <p>
+                    PLANO SEMANAL: R$ 64.99
+                </p>
+                <section id="container-modal" class="modal">
+                    <img onclick="closeModal()" src="img/close.svg" alt="">
+                    <section id="container-input">
+                        
+                        <label for="iname">Nome/Sobrenome:</label>
+                        <p><input type="text" name="name" id="iname"></p>
+
+                        <label for="icpf"> Seu CPF</label>
+                        <p><input type="number" name="cpf" id="icpf"></p>
+                        
+                        <label for="iaddress"> Endereço:</label>
+                        <p><input type="text" name="address" id="iaddress"></p>
+
+                        <label for="itel">Telefone:</label>
+                        <p><input type="number" name="tel" id="itel"></p>
+
+                        <label for="iemail">E-mail:</label>
+                        <p><input type="email" name="email" id="iemail"></p>
+
+                        <label for="icard">Cartão de Credito/Débito:</label>
+                        <p><input type="number" name="card" id="icard"></p>
+                        <p><button>Finalizar Matricula</button></p>
+                    </section>
+                </section>
+                <button>Tá ruim? Matricula ae</button>
+            </section>
         </section>
+        
+        
     </main>
-    <script src="script.js"></script>
+    
+    <script src="js/script.js"></script>
 </body>
+
 </html>

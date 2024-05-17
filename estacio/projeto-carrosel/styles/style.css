@@ -115,7 +115,7 @@ span
     border: none;
 }
 
-.container-button div 
+.container-button > div 
 {
     position: relative;
     max-width: 400px;
@@ -182,14 +182,14 @@ span
     background-color: rgb(71, 40, 97);
     border-radius: 10px;
     padding: 15px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
     
 }
 
 
-#container-input
+#container-input form
 {
     display: flex;
     flex-direction: column;
@@ -199,7 +199,7 @@ span
 #container-input input
 {
     outline: none;
-    width: 200px;
+    width: 250px;
     height: 30px;
     border-radius: 10px;
     color: black;
@@ -210,6 +210,37 @@ span
 #container-input button
 {
     height: 40px;
+}
+
+#container-input-card
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card
+{
+    margin: 0;
+}
+
+#container-input-card img
+{
+    width: 50px;
+    height: 40px;
+    filter: grayscale(100%) opacity(0.8);
+    transition: filter 0.5s;
+}
+
+#span
+{
+    position: absolute;
+    top: 77%;
+    left: 2%;
+    font-weight: 400;
+    font-size: 0.6rem;
+
 }
 
 #container-modal > img
@@ -235,3 +266,25 @@ span
     box-shadow: 0px 0px 5px 500px rgba(0, 0, 0, 0.795);
 }
 
+input#icpf
+{
+    transition: border 0.5s;
+}
+
+#container-promo
+{
+    display: flex;
+    justify-content: end;
+    gap: 3px;
+}
+
+#container-promo > input
+{
+    width: 90px;
+    height: 26px;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    text-indent: 5px;
+    border: none;
+}

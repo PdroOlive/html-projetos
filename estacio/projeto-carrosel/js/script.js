@@ -10,6 +10,12 @@ let onImgWeekly = document.querySelector("#image-weekly");
 let textWeekly = document.querySelector("#image-weekly ul");
 let activeModal = document.getElementById("container-modal");
 let mainOn = document.getElementById("container-main");
+const cpfFormat = document.getElementById("icpf");
+const card = document.getElementById("icard");
+const imageVisa = document.getElementById("image-visa");
+const imageElo = document.getElementById("image-elo");
+const imageMaster = document.getElementById("image-master");
+
 
 
 function createObjectCard(height, text)
@@ -66,7 +72,65 @@ function closeModal()
     document.body.style.overflowY = ``;
 }
 
+function flagOn(flag)
+{
+    flag.style.filter = `grayscale(0)`;
+}
+
+function flagOff(flag)
+{
+    flag.style.filter = ``;
+    card.style.border = `none`;
+}
+
+
+function checkCardFlag()
+{
+    const flagArray = [0, 1, 2, 3, 7, 8, 9];
+    let cardFlag = Number(card.value);
+
+
+    if(cardFlag === 4)
+    {
+        flagOn(imageVisa);
+    }
+    else if (cardFlag === 5)
+    {
+        flagOn(imageMaster);
+    }
+    else if (cardFlag === 6)
+    {
+        flagOn(imageElo);
+    }
+    else if (cardFlag == " ")
+    {
+        flagOff(imageVisa);
+        flagOff(imageMaster);
+        flagOff(imageElo);
+    }
+    
+    
+}
 
 
 
+cpfFormat.addEventListener("keypress", () => {
+    let cpfLength = cpfFormat.value.length;
+    if(cpfLength === 3 || cpfLength === 7)
+    {
+        cpfFormat.value += ".";
+    }
+    else if(cpfLength === 11)
+    {
+        cpfFormat.value += "-";
+    }
+});
+
+card.addEventListener("keypress", () => {
+    let cardLength = card.value.length;
+    if(cardLength === 4 || cardLength === 9 || cardLength === 14)
+    {
+        card.value += " ";
+    }
+});
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

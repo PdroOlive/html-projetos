@@ -15,7 +15,11 @@ const card = document.getElementById("icard");
 const imageVisa = document.getElementById("image-visa");
 const imageElo = document.getElementById("image-elo");
 const imageMaster = document.getElementById("image-master");
+const valueTot = document.getElementById("container-value");
+let inputCupom = document.getElementById("icupom");
 
+let price = 1368;
+let calcResult = 0;
 
 
 function createObjectCard(height, text)
@@ -23,7 +27,6 @@ function createObjectCard(height, text)
     this.height = height,
     this.text = text
 }
-
 let imgYearly = new createObjectCard("500px", `Beneficio`);
 let imgMonthly = new createObjectCard("500px", `Olar`);
 let imgWeekly = new createObjectCard("500px", `oiiii`);
@@ -34,7 +37,6 @@ function nextImage()
     currentIndex = (currentIndex + 1) % totalImages;
     updateCarousel();
 }
-
 function updateCarousel() 
 {
     let newPosition = -currentIndex * 100 + '%';
@@ -49,7 +51,6 @@ function imgSwitchOn(image, text)
     image.style.height = imgMonthly.height;
     text.style.gap = `70px`
 }
-
 function imgSwitchOff(image, text)
 {
     text.style.visibility = `hidden`;
@@ -62,28 +63,25 @@ function showModal()
 {
     activeModal.classList.add("show-modal");
     document.body.style.overflowY = `hidden`;
+    showValue(ticketSaleOff(price));
 }
-
-
-
 function closeModal()
 {
     activeModal.classList.remove("show-modal");
     document.body.style.overflowY = ``;
+    inputCupom.value = "";
 }
+
 
 function flagOn(flag)
 {
     flag.style.filter = `grayscale(0)`;
 }
-
 function flagOff(flag)
 {
     flag.style.filter = ``;
     card.style.border = `none`;
 }
-
-
 function checkCardFlag()
 {
     const flagArray = [0, 1, 2, 3, 7, 8, 9];
@@ -112,7 +110,26 @@ function checkCardFlag()
     
 }
 
+function showValue(num)
+{
+    let formatPrice = num.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+    valueTot.innerText = `Valor Total: ${formatPrice}`;
+    valueTot.style.opacity = `1`;
+    valueTot.style.visibility = `visible`;
+}
 
+
+function ticketSaleOff(num)
+{
+    let ticket = `promo5`;
+    let inputTicket = inputCupom.value;
+    if(inputTicket === ticket)
+    {                           
+        return valueTot.innerText = `Valor Total: ${(calcResult = (num - 5).toLocaleString("pt-BR" , {style: "currency", currency: "BRL"}))}`;
+        
+    }
+    return num
+}
 
 cpfFormat.addEventListener("keypress", () => {
     let cpfLength = cpfFormat.value.length;

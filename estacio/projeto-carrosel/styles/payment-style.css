@@ -1,0 +1,138 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root
+{
+    --colorOne: #011F26;
+    --colorTwo: #A5A692;
+    --colorThree: #BFB78F; 
+}
+
+/*
+    #011F26; 
+    #A5A692;  
+    #BFB78F;  
+*/
+
+body
+{
+    background-color: var(--colorOne);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 60px;
+    background-color: var(--colorTwo);
+    border-radius: 10px;
+}
+
+
+#container-input-card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+
+ul img
+{
+    width: 50px;
+    height: 40px;
+    filter: grayscale(100%) opacity(0.8);
+    transition: filter 0.5s;
+}
+
+#container-input-card input
+{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    text-indent: 5px;
+    color: black;
+    box-shadow: 0px 0px 5px var(--colorOne);
+    border: none;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+#container-input-card input:focus
+{
+    box-shadow: 0px 0px 10px var(--colorOne);
+}
+#span
+{
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-block: 8px;
+}
+
+
+#container-payment-value
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end !important;
+    gap: 6px;
+    padding-right: 5px;
+}
+
+#container-promo
+{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+#container-promo > input
+{
+    width: 89px;
+    height: 26px;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    text-indent: 5px;
+    border: none;
+}
+
+#container-promo > button
+{
+    height: 26px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    border: none;
+}
+
+#container-value
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+

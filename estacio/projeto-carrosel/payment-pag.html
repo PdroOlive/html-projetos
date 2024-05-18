@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="styles/payment-style.css">
+</head>
+<body>
+    <main>
+        <section id="container-input-card">
+            <input type="text" name="name" id="iname" placeholder="Nome impresso no Cartão">
+            <ul>
+                <li class="card" id="card-elo"><img id="image-elo" src="img/elo.svg" alt="Elo Icon"></li>
+                <li class="card" id="card-master"><img id="image-master" src="img/mastercard.svg" alt="MasterCard Icon"></li>
+                <li class="card" id="card-visa"><img id="image-visa" src="img/visa.svg" alt="Visa Icon"></li>
+            </ul>
+            <input onkeyup="checkCardFlag()" onkeypress="cardInsert()" type="text" maxlength="19" name="card" id="icard" placeholder="Digite Número do Cartão" autocomplete="off">
+            <span id="span">(Crédito ou Débito)</span>
+            <input type="text" name="" id="">
+            <input type="text" class="info-card" name="cvv" id="icvv" placeholder="CVV" autocomplete="off">
+            <input type="month" class="info-card" name="date" id="idate" placeholder="Data de Validade" autocomplete="off">
+        </section>
+        <section id="container-payment-value">
+            <div id="container-promo">
+                <label for="icupom">Cupom</label>
+                <input type="text" name="cupom" id="icupom" maxlength="6" autocomplete="off">
+                <button onclick="ticketSaleOff(price)"><img src="img/check.svg" alt=""></button>
+            </div>
+            <div id="saleoff"></div>
+            <div id="container-value">Valor Total:</div>
+        </section>
+        <button>Finalizar Pagamento</button>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

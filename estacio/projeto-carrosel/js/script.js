@@ -17,6 +17,8 @@ const imageElo = document.getElementById("image-elo");
 const imageMaster = document.getElementById("image-master");
 const valueTot = document.getElementById("container-value");
 let inputCupom = document.getElementById("icupom");
+const saleOff = document.getElementById("saleoff");
+
 
 let price = 1368;
 let calcResult = 0;
@@ -63,7 +65,6 @@ function showModal()
 {
     activeModal.classList.add("show-modal");
     document.body.style.overflowY = `hidden`;
-    showValue(ticketSaleOff(price));
 }
 function closeModal()
 {
@@ -71,6 +72,7 @@ function closeModal()
     document.body.style.overflowY = ``;
     inputCupom.value = "";
 }
+
 
 
 function flagOn(flag)
@@ -84,7 +86,6 @@ function flagOff(flag)
 }
 function checkCardFlag()
 {
-    const flagArray = [0, 1, 2, 3, 7, 8, 9];
     let cardFlag = Number(card.value);
 
 
@@ -124,12 +125,15 @@ function ticketSaleOff(num)
     let ticket = `promo5`;
     let inputTicket = inputCupom.value;
     if(inputTicket === ticket)
-    {                           
-        return valueTot.innerText = `Valor Total: ${(calcResult = (num - 5).toLocaleString("pt-BR" , {style: "currency", currency: "BRL"}))}`;
+    {
+        saleOff.innerText = `Desconto de 5% Off!!`;                           
+        return valueTot.innerText = `Valor Total: ${(calcResult = (num - ((5/100) * num)).toLocaleString("pt-BR" , {style: "currency", currency: "BRL"}))}`;
         
     }
     return num
 }
+
+showValue(ticketSaleOff(price));
 
 cpfFormat.addEventListener("keypress", () => {
     let cpfLength = cpfFormat.value.length;
@@ -143,11 +147,14 @@ cpfFormat.addEventListener("keypress", () => {
     }
 });
 
-card.addEventListener("keypress", () => {
+function cardInsert()
+{
     let cardLength = card.value.length;
     if(cardLength === 4 || cardLength === 9 || cardLength === 14)
     {
         card.value += " ";
     }
-});
+}
+
+
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

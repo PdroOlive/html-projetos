@@ -46,7 +46,6 @@ main
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 5px;
     padding: 10px;
 }
@@ -89,6 +88,53 @@ ul img
     font-weight: 600;
     margin-block: 8px;
 }
+#container-info-card
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    position: relative;
+}
+
+#cvv-infos
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.showoff-cvv
+{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #A5E381;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.show-cvv
+{
+    margin-top: 5px;
+    position: absolute;
+    top: 99%;
+    left: -1%;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.0);
+    transition: all 0.5s ease-in-out;
+}
+#icvv, #idate
+{
+    width: 65.5px !important;
+    text-indent: 2px !important;
+    text-align: center;
+    padding-right: 2px;
+    transition: border 0.5s ease-in-out;
+
+}
 
 
 #container-payment-value
@@ -116,6 +162,13 @@ ul img
     border-radius: 10px;
     text-indent: 5px;
     border: none;
+    box-shadow: 0px 0px 5px var(--colorOne);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+#container-promo > input:focus
+{
+    box-shadow: 0px 0px 10px var(--colorOne);
 }
 
 #container-promo > button
@@ -127,6 +180,8 @@ ul img
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
     border-radius: 10px;
     border: none;
+    box-shadow: 0px 0px 5px var(--colorOne);
+
 }
 
 #container-value
@@ -136,3 +191,11 @@ ul img
     transition: all 0.5s ease-in-out;
 }
 
+#payment-finale
+{
+    background-color: var(--colorOne);
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+}

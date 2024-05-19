@@ -18,6 +18,8 @@ const imageMaster = document.getElementById("image-master");
 const valueTot = document.getElementById("container-value");
 let inputCupom = document.getElementById("icupom");
 const saleOff = document.getElementById("saleoff");
+const inputCVV = document.getElementById("icvv");
+const validatedInput = document.getElementById("input-validated");
 
 
 let price = 1368;
@@ -101,7 +103,7 @@ function checkCardFlag()
     {
         flagOn(imageElo);
     }
-    else if (cardFlag == " ")
+    else if (cardFlag == "")
     {
         flagOff(imageVisa);
         flagOff(imageMaster);
@@ -155,6 +157,35 @@ function cardInsert()
         card.value += " ";
     }
 }
+
+
+function checkCVV()
+{
+    let cvvCurrent = inputCVV.value.length;
+
+    if (cvvCurrent == ``)
+    {
+        inputCVV.style.border = `none`;
+        validatedInput.innerText = ``;
+    }
+    else if(cvvCurrent > 3 || cvvCurrent < 3)
+    {
+        inputCVV.style.border = `1px solid red`;
+        validatedInput.classList.add("show-cvv");
+        validatedInput.innerText = `Cvv inválido`;
+        validatedInput.style.color = `red`;
+    }
+    else if (cvvCurrent === 3)
+    {
+        inputCVV.style.border = `1px solid #A5E381`;
+        validatedInput.classList.add("show-cvv");
+        validatedInput.innerText = `Cvv valido`;
+        validatedInput.style.color = `#A5E381`;
+    }
+    
+}
+
+
 
 
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

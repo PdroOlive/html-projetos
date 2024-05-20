@@ -20,11 +20,23 @@ let inputCupom = document.getElementById("icupom");
 const saleOff = document.getElementById("saleoff");
 const inputCVV = document.getElementById("icvv");
 const validatedInput = document.getElementById("input-validated");
+const inputDate = document.getElementById("idate");
+const menuEffect = document.getElementById("progress-card");
+const containerCard = document.getElementById("container-input-card");
+const pixEffect = document.getElementById("progress-pix");
 
 
 let price = 1368;
 let calcResult = 0;
 
+function isError(error)
+{
+    error.style.border = `1px solid red`;
+}
+function isValid(valid)
+{
+    valid.style.border = `1px solid #A5E381`;
+}
 
 function createObjectCard(height, text)
 {
@@ -109,8 +121,6 @@ function checkCardFlag()
         flagOff(imageMaster);
         flagOff(imageElo);
     }
-    
-    
 }
 
 function showValue(num)
@@ -120,8 +130,6 @@ function showValue(num)
     valueTot.style.opacity = `1`;
     valueTot.style.visibility = `visible`;
 }
-
-
 function ticketSaleOff(num)
 {
     let ticket = `promo5`;
@@ -134,8 +142,8 @@ function ticketSaleOff(num)
     }
     return num
 }
-
 showValue(ticketSaleOff(price));
+
 
 cpfFormat.addEventListener("keypress", () => {
     let cpfLength = cpfFormat.value.length;
@@ -185,7 +193,49 @@ function checkCVV()
     
 }
 
+function formatDate()
+{
+    let dataNew = inputDate.value.length;
+    if(dataNew === 2)
+    {
+        inputDate.value += "/";
+    }
+    
+}
+function ckeckErrorDate()
+{
+    let dataNew = inputDate.value.length;
+    if(dataNew == "")
+    {
+        inputDate.style.border = ``;
+    }
+    else if (dataNew === 5)
+    {
+        isValid(inputDate);
+    }
+    else if( dataNew < 5)
+    {
+        isError(inputDate);
+    }
+}
+
+function effectApply(effect)
+{
+    effect.style.width = `100%`;
+    effect.style.background = `#011F26`;
+}
+function effectDisable(effect)
+{
+    effect.style.width = `0%`;
+}
 
 
-
+function showCard()
+{
+    containerCard.style.display = `flex`;
+}
+function closeCard()
+{
+    containerCard.style.display = `none`;
+}
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

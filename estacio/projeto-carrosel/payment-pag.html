@@ -8,7 +8,16 @@
 </head>
 <body>
     <main>
+        <section onclick="showCard()" onmouseenter="effectApply(menuEffect)" onmouseleave="effectDisable(menuEffect)" id="container-menu">
+            <div id="container-card-menu" class="menu">
+                <div id="container-image-card"><img src="img/credit-card.svg" alt="Card Image"></div>
+                <span>Cartão (Crédito ou Débito)</span>
+            </div>
+            <div class="progress-effect" id="progress-card"></div>
+        </section>
+        
         <section id="container-input-card">
+            <span id="close" class="close" onclick="closeCard()"><img src="img/close.svg" alt=""></span>
             <input type="text" name="name" id="iname" placeholder="Nome impresso no Cartão">
             <ul>
                 <li class="card" id="card-elo"><img id="image-elo" src="img/elo.svg" alt="Elo Icon"></li>
@@ -23,11 +32,28 @@
                 </div>
                 <span id="input-validated" class="showoff-cvv"></span>
                 <div id="date-infos">
-                    <input type="text" name="date" id="idate" placeholder="MM/YYYY" autocomplete="off">
-                    <span></span>
+                    <input onkeypress="formatDate()" oninput="ckeckErrorDate()" type="text" name="date" id="idate" placeholder="MM/YY" maxlength="5" autocomplete="off">
                 </div>
             </div>
         </section>
+
+        <section id="container-pix" onmouseenter="effectApply(pixEffect)" onmouseleave="effectDisable(pixEffect)">
+            <div id="container-menu-pix" class="menu">
+                <div>
+                    <img src="img/pix.svg" alt="Pix Image">
+                </div>
+                <span>PIX</span>
+            </div>
+            <div class="progress-effect" id="progress-pix"></div>
+        </section>
+        <section id="container-payment-pix">
+            <span id="close-pix" class="close"><img src="img/close.svg" alt=""></span>
+            <div id="container-qrcode">
+                <img src="img/qr-code.svg" alt="">
+            </div>
+            <span>Mire a câmera do celular para fazer o pagamento ou se preferir clique no link abaixo: <a href="https://qr.codes/gPM8yD" target="_blank" rel="noopener noreferrer">clique aqui</a></span>
+        </section>
+
         <section id="container-payment-value">
             <div id="container-promo">
                 <label for="icupom">Cupom</label>

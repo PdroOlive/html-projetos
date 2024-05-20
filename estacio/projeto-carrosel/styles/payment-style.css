@@ -12,6 +12,7 @@
     --colorOne: #011F26;
     --colorTwo: #A5A692;
     --colorThree: #BFB78F; 
+    --colorShadow: rgba(0, 0, 0, 0.644);
 }
 
 /*
@@ -35,20 +36,98 @@ main
     display: flex;
     flex-direction: column;
     width: 400px;
-    gap: 60px;
     background-color: var(--colorTwo);
     border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--colorShadow);
 }
+
+
+
+.menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    cursor: pointer;
+    padding-block: 0.3em;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.322); 
+}
+
+#container-image-card
+{
+    width: 30px;
+    height: 30px;
+}
+#container-image-card img
+{
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+#container-card-menu span
+{
+    user-select: none;
+}
+
+.progress-effect
+{
+    height: 2px;
+    width: 0%;
+    background-color: var(--colorTwo);
+    transition: width 0.6s ease-in-out;
+}
+
+
+#container-menu
+{
+    transition: box-shadow 0.1s ease-in-out;
+}
+#container-menu:active
+{
+    
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.555);
+}
+
 
 
 #container-input-card
 {
-    display: flex;
+    margin-block: 20px;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 5px;
     padding: 10px;
 }
+
+.close
+{
+    float: right;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.5s ease-in-out;
+    filter: brightness(0) saturate(100%) invert(8%) sepia(17%) saturate(6040%) hue-rotate(164deg) brightness(91%) contrast(99%);
+    
+}
+
+#close img
+{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+#close:hover
+{
+    background-color: rgba(0, 0, 0, 0.308);
+}
+
+
 
 ul
 {
@@ -73,14 +152,14 @@ ul img
     border-radius: 10px;
     text-indent: 5px;
     color: black;
-    box-shadow: 0px 0px 5px var(--colorOne);
+    box-shadow: 0px 0px 5px var(--colorShadow);
     border: none;
     transition: box-shadow 0.5s ease-in-out;
 }
 
 #container-input-card input:focus
 {
-    box-shadow: 0px 0px 10px var(--colorOne);
+    box-shadow: 0px 0px 10px var(--colorShadow);
 }
 #span
 {
@@ -137,6 +216,39 @@ ul img
 }
 
 
+#container-menu-pix
+{
+    display: flex;
+    justify-content: center;
+}
+
+#close-pix
+{
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+#close-pix img
+{
+    width: 100%;
+    height: 100%
+}
+
+
+#container-qrcode
+{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+}
+
+#container-qrcode img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
 #container-payment-value
 {
     display: flex;
@@ -146,8 +258,15 @@ ul img
     padding-right: 5px;
 }
 
+#container-payment-pix
+{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 #container-promo
 {
+    margin-top: 20px;
     display: flex;
     gap: 6px;
     align-items: center;
@@ -162,13 +281,13 @@ ul img
     border-radius: 10px;
     text-indent: 5px;
     border: none;
-    box-shadow: 0px 0px 5px var(--colorOne);
+    box-shadow: 0px 0px 5px var(--colorShadow);
     transition: box-shadow 0.5s ease-in-out;
 }
 
 #container-promo > input:focus
 {
-    box-shadow: 0px 0px 10px var(--colorOne);
+    box-shadow: 0px 0px 10px var(--colorShadow);
 }
 
 #container-promo > button
@@ -180,7 +299,7 @@ ul img
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.534);
     border-radius: 10px;
     border: none;
-    box-shadow: 0px 0px 5px var(--colorOne);
+    box-shadow: 0px 0px 5px var(--colorShadow);
 
 }
 

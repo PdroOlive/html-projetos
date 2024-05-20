@@ -17,15 +17,16 @@
                 <img src="imagem2.png" alt="Imagem 2">
                 <img src="imagem3.jpg" alt="Imagem 3">
             </div>
-            <h1>PROJETINHO<span>FELLAS</span></h1>
+            <h1>Bomba<span>Gym</span></h1>
+            <p>
+                Venha fazer parte do PROJETINHO.... está esperando as férias? vem logo pra meter o shape antes!!!
+            </p>
         </div>
         <section id="container-content">
             <p>
                 Endereço: Duque de Caxias N°46 - Entre a Rua Bruno e Rua Marrone
             </p>
-            <p>
-                Venha fazer parte do PROJETINHO.... está esperando as férias? vem logo pra meter o shape antes!!!
-            </p>
+            
         </section>
         <section class="container-button">
             
@@ -86,13 +87,13 @@
                     <img onclick="closeModal()" src="img/close.svg" alt="">
                     <section id="container-input">
                         
-                        <form action="#">
+                        <form action="payment-pag.html" target="_blank" method="get">
                             <p>
                                 <input type="text" name="name" id="iname" autocomplete="name" placeholder="Nome/Sobrenome" required>
                             </p>
 
                             <p>
-                                <input type="text" maxlength="14" name="cpf" id="icpf" class="error" autocomplete="off" placeholder="Digite seu CPF" required>
+                                <input onkeypress="formatCPF()" type="text" maxlength="14" name="cpf" id="icpf" class="error" autocomplete="off" placeholder="Digite seu CPF" required>
                             </p>
                             
                             <p>
@@ -100,7 +101,7 @@
                             </p>
 
                             <p>
-                                <input type="number" name="tel" id="itel" placeholder="Digite seu número de celular" pattern="/^\d\d{4}\-\d{4}$/" autocomplete="off" required>
+                                <input type="text" name="tel" id="itel" placeholder="Digite seu número de celular" pattern="/^\d\d{4}\-\d{4}$/" autocomplete="off" required>
                             </p>
 
                             <p>
@@ -108,8 +109,8 @@
                             </p>
 
                             
-                            <p>
-                                <button><a href="payment-pag.html" target="_blank" rel="noopener noreferrer">Finalizar Matricula</a></button>
+                            <p id="button-register">
+                                <button>Finalizar Matricula</button>
                             
                             </p>
                         </form>

@@ -24,11 +24,12 @@ const inputDate = document.getElementById("idate");
 const menuEffect = document.getElementById("progress-card");
 const containerCard = document.getElementById("container-input-card");
 const pixEffect = document.getElementById("progress-pix");
-
+const containerPix = document.getElementById("container-payment-pix");
 
 let price = 1368;
 let calcResult = 0;
-
+let cardOn = false;
+let pixON = false;
 function isError(error)
 {
     error.style.border = `1px solid red`;
@@ -144,8 +145,8 @@ function ticketSaleOff(num)
 }
 showValue(ticketSaleOff(price));
 
-
-cpfFormat.addEventListener("keypress", () => {
+function formatCPF()
+{
     let cpfLength = cpfFormat.value.length;
     if(cpfLength === 3 || cpfLength === 7)
     {
@@ -155,7 +156,7 @@ cpfFormat.addEventListener("keypress", () => {
     {
         cpfFormat.value += "-";
     }
-});
+}
 
 function cardInsert()
 {
@@ -230,12 +231,13 @@ function effectDisable(effect)
 }
 
 
-function showCard()
+
+function showCard(container)
 {
-    containerCard.style.display = `flex`;
+    container.style.display = `flex`;
 }
-function closeCard()
+function closeCard(container)
 {
-    containerCard.style.display = `none`;
+    container.style.display = `none`;
 }
 setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

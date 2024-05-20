@@ -24,7 +24,7 @@
         </div>
         <section id="container-content">
             <p>
-                Endereço: Duque de Caxias N°46 - Entre a Rua Bruno e Rua Marrone
+                Endereço: Duque de Caxias N°46 - Entre a Rua Bruno e Marrone / Rua Santo Antônio
             </p>
             
         </section>
@@ -43,13 +43,12 @@
                         <li><img class="image-svg" src="img/washer.svg" alt=""> Direito a vaga no estacionamento</li>
                         <li><img class="image-svg" src="img/washer.svg" alt=""> Participa dos sorteios mensais</li>
                     </ul>
-                    
                 </div>
                 
                 <p>
                     PLANO ANUAL: R$ 1.368.00 - 5% OFF!!!
                 </P>
-                <button onclick="showModal()"> Tá ruim? Matricula ae</button>
+                <a href="payment-pag.html" target="_blank" rel="noopener noreferrer"><button> Tá ruim? Matricula ae</button></a>
             </section>
      
             <section class="container-button">
@@ -67,7 +66,7 @@
                     PLANO MENSAL: R$ 120.00
                 </p>
                 
-                <button>Tá ruim? Matricula ae</button>
+                <a href="payment-mensal.html" target="_blank" rel="noopener noreferrer"><button>Tá ruim? Matricula ae</button></a>
             </section>
             <section class="container-button">
                 <div class="container-img" id="image-weekly" onclick="imgSwitchOn(onImgWeekly, textWeekly)" onmouseleave="imgSwitchOff(onImgWeekly, textWeekly)">
@@ -83,44 +82,21 @@
                 <p>
                     PLANO SEMANAL: R$ 64.99
                 </p>
-                <section id="container-modal" class="modal">
-                    <img onclick="closeModal()" src="img/close.svg" alt="">
-                    <section id="container-input">
-                        
-                        <form action="payment-pag.html" target="_blank" method="get">
-                            <p>
-                                <input type="text" name="name" id="iname" autocomplete="name" placeholder="Nome/Sobrenome" required>
-                            </p>
-
-                            <p>
-                                <input onkeypress="formatCPF()" type="text" maxlength="14" name="cpf" id="icpf" class="error" autocomplete="off" placeholder="Digite seu CPF" required>
-                            </p>
-                            
-                            <p>
-                                <input type="text" name="address" id="iaddress" autocomplete="address-line1" placeholder="Digite seu Endereço" required>
-                            </p>
-
-                            <p>
-                                <input type="text" name="tel" id="itel" placeholder="Digite seu número de celular" pattern="/^\d\d{4}\-\d{4}$/" autocomplete="off" required>
-                            </p>
-
-                            <p>
-                                <input type="email" name="email" id="iemail" placeholder="Digite seu E-mail" required>
-                            </p>
-
-                            
-                            <p id="button-register">
-                                <button>Finalizar Matricula</button>
-                            
-                            </p>
-                        </form>
-                    </section>
-                </section>
-            <button>Tá ruim? Matricula ae</button>
+            <a href="payment-week.html" target="_blank" rel="noopener noreferrer"><button>Tá ruim? Matricula ae</button></a>
         </section>
-        
-        
     </main>
+
+    <footer>
+        <h1>Bomba Gym</h1>
+        <p>"A dor que você sente hoje é a força que você sentirá amanhã..."</p>
+        <a href="about.html" target="_blank"  rel="noopener noreferrer">Nosso Espaço</a>
+        <ul>
+            <li><a class="footer-social" href="#"><abbr title="GitHub"><img src="img/social/github.svg" alt=""></abbr></a></li>
+            <li><a class="footer-social" href="#"><abbr title="Instagram"><img src="img/social/instagram.svg" alt=""></abbr></a></li>
+            <li><a class="footer-social" href="#"><abbr title="Linkedln"><img src="img/social/linkedin.svg" alt=""></abbr></a></li>
+        </ul>
+        <p>&copy;By PdroHenrique</p>
+    </footer>
     
     <script src="js/script.js"></script>
 </body>

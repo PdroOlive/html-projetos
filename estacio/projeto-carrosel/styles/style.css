@@ -27,18 +27,29 @@ body::-webkit-scrollbar-thumb
 }
 
 
-
-button 
+button
 {
     color: black;
     cursor: pointer;
     background-color: #A5A692;
+    transform: scale(1.0);
+    box-shadow: 0px 0px 10px black;
+    transition: transform 0.2s;
+}
+
+button:active
+{
+    transform: scale(0.97);
+
 }
 
 body 
 {
     max-width: 100vw;
-    background-color: #011F26;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(1,31,38,1) 100%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     position: relative;
 
@@ -51,7 +62,6 @@ body
     height: 200px;
     margin: auto;
     overflow: hidden;
-    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.219);
 }
 
 .carousel-images 
@@ -71,7 +81,7 @@ body
     height: 100%;
 }
 
-h1 
+.carousel h1 
 {
     position: absolute;
     top: 20%;
@@ -124,7 +134,8 @@ span
 {
     padding: 10px;
     text-align: center;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -187,90 +198,36 @@ span
 }
 
 
-.modal
-{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.1);
-    width: 430px;
-    background-color: #A5A692;
-    border-radius: 10px;
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-    
-}
-
-
-#container-input form
+footer
 {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 5px;
+    gap: 3em;
+    align-items: center;
 }
-#container-input input
+
+footer h1 + p
 {
-    outline: none;
-    width: 250px;
-    height: 30px;
-    border-radius: 10px;
-    color: black;
-    border: none;
-    text-indent: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.699);
-    transition: box-shadow 0.5s ease-in-out;
+    text-align: center;
+    font-size: 1rem;
 }
-#container-input input:focus
+
+footer p 
 {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.699);
+    font-size: 0.8rem;
 }
 
-#container-input button
+footer ul
 {
-    height: 40px;
-    background-color: #011F26;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.699);
-    transition: box-shadow 0.5s ease-in-out;
-    color: #c1c2ba;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 215.53px;
+
 }
 
-#container-input button:hover, #container-input button:active
+.footer-social img
 {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.699);
+    filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(140%) hue-rotate(28deg) brightness(87%) contrast(86%);
+    width: 25px;
 }
-
-
-#container-modal > img
-{
-    width: 20px;
-    height: 20px;
-    float: right;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.5s;
-}
-
-#container-modal > img:hover
-{
-    background-color: rgba(0, 0, 0, 0.288);
-}
-
-.show-modal
-{
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1.0);
-    box-shadow: 0px 0px 5px 500px rgba(0, 0, 0, 0.795);
-}
-
-input#icpf
-{
-    transition: border 0.5s;
-}
-
-
-
-

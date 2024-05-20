@@ -6,17 +6,17 @@
     <title>Pagamento</title>
     <link rel="stylesheet" href="styles/payment-style.css">
 </head>
-<body onload="showValue(ticketSaleOff(price), valueTot)">
+<body onload="showValue(priceWeek, containerTotWeek)">
     <main>
         <div id="container-image">
-            <img src="img/anual.jpg" alt="Foto Anual">
+            <img src="img/semanal.jpg" alt="Foto Anual">
             <ul>
-                <li> <img class="image-svg" src="img/washer.svg" alt=""> Sem Restrição de horário</li>
-                <li><img class="image-svg" src="img/washer.svg" alt=""> Acesso livre a todas as aulas</li>
-                <li><img class="image-svg" src="img/washer.svg" alt=""> Direito a um armário pessoal</li>
-                <li><img class="image-svg" src="img/washer.svg" alt=""> Direito a vaga no estacionamento</li>
-                <li><img class="image-svg" src="img/washer.svg" alt=""> Participa dos sorteios mensais</li>
-            </ul>
+                <li> <img class="image-svg" src="img/washer.svg" alt=""> Horário: 15hrs ás 19hrs</li>
+                <li><img class="image-svg" src="img/washer.svg" alt=""> De Segunda á Sexta</li>
+                <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito a armário</li>
+                <li><img class="image-svg" src="img/washer.svg" alt=""> Sem direito ao estacionamento</li>
+                <li><img class="image-svg" src="img/washer.svg" alt=""> Sem sorteios</li>
+            </ul>     
         </div>
         <section onclick="showCard(containerCard)" onmouseenter="effectApply(menuEffect)" onmouseleave="effectDisable(menuEffect)" class="container-menu">
             <div id="container-card-menu" class="menu">
@@ -66,13 +66,7 @@
         </section>
 
         <section id="container-payment-value">
-            <div id="container-promo">
-                <label for="icupom">Cupom</label>
-                <input type="text" name="cupom" id="icupom" maxlength="6" autocomplete="off">
-                <button onclick="ticketSaleOff(price)"><img src="img/check.svg" alt=""></button>
-            </div>
-            <div id="saleoff"></div>
-            <div id="container-value">Valor Total:</div>
+            <div id="container-value-week">Valor Total:</div>
         </section>
         <button  id="payment-finale">Finalizar Pagamento</button>
     </main>

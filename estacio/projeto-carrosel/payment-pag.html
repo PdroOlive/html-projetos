@@ -6,7 +6,7 @@
     <title>Pagamento</title>
     <link rel="stylesheet" href="styles/payment-style.css">
 </head>
-<body onload="showValue(ticketSaleOff(price), valueTot)">
+<body onload="showValue(ticketSaleOff(price), valueTot)" onload="parcelCard()">
     <main>
         <div id="container-image">
             <img src="img/anual.jpg" alt="Foto Anual">
@@ -35,7 +35,22 @@
                 <li class="card" id="card-visa"><img id="image-visa" src="img/visa.svg" alt="Visa Icon"></li>
             </ul>
             <input onkeyup="checkCardFlag()" onkeypress="cardInsert()" type="text" maxlength="19" name="card" id="icard" placeholder="Digite Número do Cartão" autocomplete="off">
+
+            <select name="parcel" id="iparcel">
+                <option value="parcela1" id="option1"></option>
+                <option value="parcela2" id="option2"></option>
+                <option value="parcela3" id="option3"></option>
+                <option value="parcela3" id="option4"></option>
+                <option value="parcela3" id="option5"></option>
+                <option value="parcela3" id="option6"></option>
+                <option value="parcela3" id="option7"></option>
+                <option value="parcela3" id="option8"></option>
+                <option value="parcela3" id="option9"></option>
+            </select>
+
             <span id="span">(Crédito ou Débito)</span>
+
+            
             <div id="container-info-card">
                 <div id="cvv-infos">
                     <input oninput="checkCVV()" type="text" name="cvv" id="icvv" placeholder="CVV" autocomplete="off">

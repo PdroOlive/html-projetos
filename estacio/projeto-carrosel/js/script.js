@@ -26,6 +26,8 @@ const menuEffect = document.getElementById("progress-card");
 const containerCard = document.getElementById("container-input-card");
 const pixEffect = document.getElementById("progress-pix");
 const containerPix = document.getElementById("container-payment-pix");
+const op = document.getElementById("option1");
+
 
 let price = 1368;
 const priceMonth = 120;
@@ -94,20 +96,28 @@ function checkCardFlag()
     if(cardFlag === 4)
     {
         flagOn(imageVisa);
+        const inputParcel = document.querySelector("#iparcel, option");
+        inputParcel.style.display = `block`;
     }
     else if (cardFlag === 5)
     {
         flagOn(imageMaster);
+        const inputParcel = document.querySelector("#iparcel, option");
+        inputParcel.style.display = `block`;
     }
     else if (cardFlag === 6)
     {
         flagOn(imageElo);
+        const inputParcel = document.querySelector("#iparcel, option");
+        inputParcel.style.display = `block`;
     }
     else if (cardFlag == "")
     {
         flagOff(imageVisa);
         flagOff(imageMaster);
         flagOff(imageElo);
+        const inputParcel = document.querySelector("#iparcel, option");
+        inputParcel.style.display = `none`;
     }
 }
 
@@ -128,7 +138,7 @@ function ticketSaleOff(num)
     {
         saleOff.innerText = `Desconto de 5% Off!!`;                           
         valueTot.innerText = `Valor Total: ${(calcResult = (num - ((5/100) * num)).toLocaleString("pt-BR" , {style: "currency", currency: "BRL"}))}`;
-        
+        op.innerText = `1x ${(calcResult = (num - ((5/100) * num)).toLocaleString("pt-BR" , {style: "currency", currency: "BRL"}))}`;
     }
     return num
 }
@@ -218,5 +228,59 @@ function closeCard(container)
 {
     container.style.display = `none`;
 }
-setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos
 
+
+
+function parcelCard()
+{
+    const op2 = document.getElementById("option2");
+    const op3 = document.getElementById("option3");
+    const op4 = document.getElementById("option4");
+    const op5 = document.getElementById("option5");
+    const op6 = document.getElementById("option6");
+    const op7 = document.getElementById("option7");
+    const op8 = document.getElementById("option8");
+    const op9 = document.getElementById("option9");
+    let res = 0;
+    for(let i = 0; i <= 9; i++)
+    {
+        res = price / i;
+        if(res.toFixed(2) === "1368.00")
+        {
+            op.innerText = `1x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "684.00")
+        {
+            op2.innerText = `2x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "456.00")
+        {
+            op3.innerText = `3x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "342.00")
+        {
+            op4.innerText = `4x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "273.60")
+        {
+            op5.innerText = `5x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "228.00")
+        {
+            op6.innerText = `6x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "195.43")
+        {
+            op7.innerText = `7x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "171.00")
+        {
+            op8.innerText = `8x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+        else if(res.toFixed(2) === "152.00")
+        {
+            op9.innerText = `9x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+    }
+}
+setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

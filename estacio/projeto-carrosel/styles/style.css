@@ -85,7 +85,7 @@ body
 {
     object-fit: cover;
     filter: brightness(30%) grayscale(100);
-    max-width: 100%;
+    width: 100%;
     height: 100%;
 }
 .carousel h1 
@@ -129,6 +129,7 @@ span
 }
 
 
+
 .container-button 
 {
     display: flex;
@@ -153,7 +154,7 @@ span
 .container-button > div 
 {
     position: relative;
-    max-width: 400px;
+    width: 400px;
     height: 300px;
     margin: auto;
     filter: grayscale(100%);
@@ -245,7 +246,15 @@ footer ul
     display: flex;
     justify-content: space-between;
     width: 215.53px;
+}
 
+footer a
+{
+    text-decoration: none;
+}
+footer a:hover
+{
+    text-decoration: underline;
 }
 
 .footer-social img

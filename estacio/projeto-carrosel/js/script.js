@@ -27,6 +27,7 @@ const containerCard = document.getElementById("container-input-card");
 const pixEffect = document.getElementById("progress-pix");
 const containerPix = document.getElementById("container-payment-pix");
 const op = document.getElementById("option1");
+const inputParcel = document.querySelector("#iparcel");
 
 
 let price = 1368;
@@ -82,6 +83,7 @@ function imgSwitchOff(image, text)
 function flagOn(flag)
 {
     flag.style.filter = `grayscale(0)`;
+    flag.style.filter = `drop-shadow(1px 1px 1px white)`;
 }
 function flagOff(flag)
 {
@@ -96,19 +98,16 @@ function checkCardFlag()
     if(cardFlag === 4)
     {
         flagOn(imageVisa);
-        const inputParcel = document.querySelector("#iparcel, option");
         inputParcel.style.display = `block`;
     }
     else if (cardFlag === 5)
     {
         flagOn(imageMaster);
-        const inputParcel = document.querySelector("#iparcel, option");
         inputParcel.style.display = `block`;
     }
     else if (cardFlag === 6)
     {
         flagOn(imageElo);
-        const inputParcel = document.querySelector("#iparcel, option");
         inputParcel.style.display = `block`;
     }
     else if (cardFlag == "")
@@ -116,7 +115,6 @@ function checkCardFlag()
         flagOff(imageVisa);
         flagOff(imageMaster);
         flagOff(imageElo);
-        const inputParcel = document.querySelector("#iparcel, option");
         inputParcel.style.display = `none`;
     }
 }
@@ -211,7 +209,7 @@ function ckeckErrorDate()
 function effectApply(effect)
 {
     effect.style.width = `100%`;
-    effect.style.background = `#011F26`;
+    effect.style.background = `white`;
 }
 function effectDisable(effect)
 {
@@ -245,6 +243,7 @@ function parcelCard()
     for(let i = 0; i <= 9; i++)
     {
         res = price / i;
+        console.log(res)
         if(res.toFixed(2) === "1368.00")
         {
             op.innerText = `1x ${res.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
@@ -283,4 +282,6 @@ function parcelCard()
         }
     }
 }
-setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos
+
+document.body.addEventListener("load", parcelCard());
+setInterval(nextImage(), 3000); // Troca de imagem a cada 3 segundos

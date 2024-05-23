@@ -83,7 +83,6 @@ function imgSwitchOff(image, text)
 function flagOn(flag)
 {
     flag.style.filter = `grayscale(0)`;
-    flag.style.filter = `drop-shadow(1px 1px 1px white)`;
 }
 function flagOff(flag)
 {
@@ -160,19 +159,19 @@ function checkCVV()
 
     if (cvvCurrent == ``)
     {
-        inputCVV.style.border = `none`;
+        inputCVV.style.outline = `2px solid white`;
         validatedInput.innerText = ``;
     }
     else if(cvvCurrent > 3 || cvvCurrent < 3)
     {
-        inputCVV.style.border = `1px solid red`;
+        inputCVV.style.outline = `2px solid red`;
         validatedInput.classList.add("show-cvv");
         validatedInput.innerText = `Cvv inválido`;
         validatedInput.style.color = `red`;
     }
     else if (cvvCurrent === 3)
     {
-        inputCVV.style.border = `1px solid #A5E381`;
+        inputCVV.style.outline = `2px solid #A5E381`;
         validatedInput.classList.add("show-cvv");
         validatedInput.innerText = `Cvv valido`;
         validatedInput.style.color = `#A5E381`;

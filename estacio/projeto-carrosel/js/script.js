@@ -28,20 +28,22 @@ const pixEffect = document.getElementById("progress-pix");
 const containerPix = document.getElementById("container-payment-pix");
 const op = document.getElementById("option1");
 const inputParcel = document.querySelector("#iparcel");
-
+const inputName = document.getElementById("iname");
 
 let price = 1368;
 const priceMonth = 120;
 const priceWeek = 64.99;
 let calcResult = 0;
+const regCharacter = /^[a-záàâãéèêíïóôõöúçñ ]+$/i;
+
 
 function isError(error)
 {
-    error.style.border = `1px solid red`;
+    error.style.outline = `2px solid red`;
 }
 function isValid(valid)
 {
-    valid.style.border = `1px solid #A5E381`;
+    valid.style.outline = `2px solid #A5E381`;
 }
 
 function createObjectCard(height, text)
@@ -87,26 +89,29 @@ function flagOn(flag)
 function flagOff(flag)
 {
     flag.style.filter = ``;
-    card.style.border = `none`;
+    card.style.outline = `2px solid white`;
 }
 function checkCardFlag()
 {
     let cardFlag = Number(card.value);
-
+    
 
     if(cardFlag === 4)
     {
         flagOn(imageVisa);
+        isValid(card);
         inputParcel.style.display = `block`;
     }
     else if (cardFlag === 5)
     {
         flagOn(imageMaster);
+        isValid(card);
         inputParcel.style.display = `block`;
     }
     else if (cardFlag === 6)
     {
         flagOn(imageElo);
+        isValid(card);
         inputParcel.style.display = `block`;
     }
     else if (cardFlag == "")
@@ -114,6 +119,7 @@ function checkCardFlag()
         flagOff(imageVisa);
         flagOff(imageMaster);
         flagOff(imageElo);
+
         inputParcel.style.display = `none`;
     }
 }
@@ -193,7 +199,7 @@ function ckeckErrorDate()
     let dataNew = inputDate.value.length;
     if(dataNew == "")
     {
-        inputDate.style.border = ``;
+        inputDate.style.outline = `2px solid white`;
     }
     else if (dataNew === 5)
     {
@@ -224,6 +230,19 @@ function showCard(container)
 function closeCard(container)
 {
     container.style.display = `none`;
+    flagOff(card)
+    flagOff(imageVisa)
+    flagOff(imageMaster)
+    flagOff(imageElo)
+    card.value = "";
+    inputName.style.outline = `2px solid white`;
+    inputName.value = "";
+    inputParcel.style.display = `none`;
+    inputDate.style.outline = `2px solid white`;
+    inputCVV.style.outline = `2px solid white`;
+    validatedInput.innerText = ``;
+    inputCVV.value = "";
+    inputDate.value = "";
 }
 
 
@@ -282,5 +301,33 @@ function parcelCard()
     }
 }
 
+
+function checkName()
+{
+    let isName = inputName.value;
+    if(isName == "")
+    {
+        inputName.style.outline = `2px solid white`;
+    }
+    else if(!regCharacter.test(isName) || !nameLength(isName))
+    {
+        isError(inputName);
+    }
+    else
+    {
+        isValid(inputName);
+    }
+    
+}
+
+function nameLength(nameLength)
+{
+    const nameArray = nameLength.split(" ");
+    return nameArray.length >= 2;
+}
+
+card.addEventListener("keypress", cardInsert);
+card.addEventListener("keyup", checkCardFlag);
+inputName.addEventListener("input", checkName);
 document.body.addEventListener("load", parcelCard());
 setInterval(nextImage(), 3000); // Troca de imagem a cada 3 segundos

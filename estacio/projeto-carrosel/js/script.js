@@ -194,7 +194,7 @@ function formatDate()
     }
     
 }
-function ckeckErrorDate()
+function checkErrorDate()
 {
     let dataNew = inputDate.value.length;
     if(dataNew == "")
@@ -336,8 +336,9 @@ function nameLength(nameLength)
     return nameArray.length >= 2;
 }
 
+
+setInterval(nextImage, 3000);
 card.addEventListener("keypress", cardInsert);
 card.addEventListener("keyup", checkCardFlag);
 inputName.addEventListener("input", checkName);
-document.body.addEventListener("load", parcelCard());
-setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos
+document.body.addEventListener("load", parcelCard); 

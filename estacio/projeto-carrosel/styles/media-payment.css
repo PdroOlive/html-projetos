@@ -6,10 +6,9 @@
     {
         width: 700px;
     }
-    #container-image ul
+    #container-image
     {
-        left: 10%;
-        
+        height: 300px;
     }
 }
 
@@ -18,6 +17,10 @@
     main, #container-image
     {
         width: 800px;
+    }
+    #container-image
+    {
+        height: 300px;
     }
 }
 @media screen and (min-width: 1201px)
@@ -33,16 +36,14 @@
     {
         width: 700px;
     }
-    #container-image img
+    #container-image > img
     {
         border-radius: 0px 10px 10px 0px;
     }
     #container-image ul
     {
         left: 10%;
+        
     }
-    body
-    {
-        margin-block: 0px;
-    }
+
 }

@@ -225,10 +225,20 @@ function effectDisable(effect)
 
 function showCard(container)
 {
+    if(innerWidth >= 1201)
+    {
+        document.body.style.marginBlock = `0em`;
+    }
+    else
+    {
+        document.body.style.marginBlock = `5em`;
+    }
     container.style.display = `flex`;
+    
 }
 function closeCard(container)
 {
+    document.body.style.marginBlock = `0em`;
     container.style.display = `none`;
     flagOff(card)
     flagOff(imageVisa)
@@ -330,4 +340,4 @@ card.addEventListener("keypress", cardInsert);
 card.addEventListener("keyup", checkCardFlag);
 inputName.addEventListener("input", checkName);
 document.body.addEventListener("load", parcelCard());
-setInterval(nextImage(), 3000); // Troca de imagem a cada 3 segundos
+setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos

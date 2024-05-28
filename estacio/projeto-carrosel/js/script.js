@@ -8,8 +8,6 @@ let onImgMonthly = document.querySelector("#image-monthly");
 let textMonthly = document.querySelector("#image-monthly ul");
 let onImgWeekly = document.querySelector("#image-weekly");
 let textWeekly = document.querySelector("#image-weekly ul");
-let activeModal = document.getElementById("container-modal");
-let mainOn = document.getElementById("container-main");
 const card = document.getElementById("icard");
 const imageVisa = document.getElementById("image-visa");
 const imageElo = document.getElementById("image-elo");
@@ -172,14 +170,12 @@ function checkCVV()
     {
         inputCVV.style.outline = `2px solid red`;
         validatedInput.classList.add("show-cvv");
-        validatedInput.innerText = `Cvv inválido`;
         validatedInput.style.color = `red`;
     }
     else if (cvvCurrent === 3)
     {
         inputCVV.style.outline = `2px solid #A5E381`;
         validatedInput.classList.add("show-cvv");
-        validatedInput.innerText = `Cvv valido`;
         validatedInput.style.color = `#A5E381`;
     }
     
@@ -341,4 +337,4 @@ setInterval(nextImage, 3000);
 card.addEventListener("keypress", cardInsert);
 card.addEventListener("keyup", checkCardFlag);
 inputName.addEventListener("input", checkName);
-document.body.addEventListener("load", parcelCard); 
+window.addEventListener("load", parcelCard); 

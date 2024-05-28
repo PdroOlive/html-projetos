@@ -33,7 +33,6 @@ body::-webkit-scrollbar-thumb
 
 button
 {
-    color: rgba(255, 255, 255, 0.705);
     cursor: pointer;
     background-color: #ffffff23;
     transform: scale(1.0);
@@ -68,26 +67,25 @@ body
 .carousel 
 {
     position: relative;
-    max-width: 700px;
-    height: 300px;
+    max-width: 100vw;
+    height: 327px;
     margin: auto;
     overflow: hidden;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.658);
+    margin-bottom: 1em;
 }
 
-.carousel-images 
+.carousel-images
 {
     display: flex;
     transition: transform 0.5s ease;
-    max-width: 100vw;
-    height: 500px;
+    width: 100%;
 }
 
 .carousel-images>img 
 {
-    object-fit: cover;
     filter: brightness(30%) grayscale(100);
     width: 100%;
-    height: 100%;
 }
 .carousel h1 
 {
@@ -95,13 +93,11 @@ body
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
 }
 
 span 
 {
     margin-left: 10px;
-    color: white;
 }
 .carousel p
 {
@@ -229,10 +225,16 @@ footer > section
     backdrop-filter: brightness(20%) grayscale(100%);
 }
 
-footer h1 + p
+#container-footer > h1
+{
+    font-size: 2em;
+}
+
+#container-footer h1 + p
 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1em;
+    
 }
 
 footer p 

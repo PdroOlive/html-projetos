@@ -243,5 +243,5 @@ barProgress.addEventListener("click", jumpTo);
 arrowButton.addEventListener("click", shuffleButton);
 repeatButton.addEventListener("click", dynamicRepeat);
 song.addEventListener("ended", nextOrRepeat);
-song.addEventListener("loadedmetadata", updateTotalTime)
+song.addEventListener("loadedmetadata", updateTotalTime);
 likeButton.addEventListener("click", likeUpdate);
